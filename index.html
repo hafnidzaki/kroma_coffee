@@ -193,7 +193,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
     <!-- 2. MAIN NAVBAR & OMNI SEARCH -->
     <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant">
-      <div class="max-w-[1320px] mx-auto px-4 py-3 flex items-center justify-between gap-2 md:gap-4 overflow-x-auto no-scrollbar">
+      <div class="max-w-[1320px] mx-auto px-4 py-3 flex items-center justify-between gap-2 md:gap-4 ">
         <!-- Brand Logo -->
         <a href="kroma_homepage_id.html" class="flex items-center gap-gutter-sm shrink-0">
           <span class="w-3 h-3 rounded-full bg-warm-caramel" aria-hidden="true"></span>
@@ -208,23 +208,23 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
           </button>
 
           <!-- Mega Menu Popover -->
-          <div id="kategori-mega-menu" class="hidden absolute left-0 top-full mt-2 w-64 bg-light-surface-container-lowest border border-light-outline-variant rounded-md p-gutter-sm z-50">
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
-              <span>Biji Kopi</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
-            </a>
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
-              <span>Grinder</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
-            </a>
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
-              <span>Mesin Espresso</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
-            </a>
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
-              <span>Manual Brew</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
-            </a>
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
-              <span>Sirup &amp; Bahan Baku</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
-            </a>
-          </div>
+          <div id="kategori-mega-menu" class="hidden absolute left-0 top-full mt-2 w-72 bg-white border border-amber-900/20 shadow-2xl rounded-xl p-3 z-[999]">
+      <a href="paket_bundling_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-stone-100 font-medium text-sm text-stone-900">
+        <span>☕ Biji Kopi Specialty</span><span class="material-symbols-outlined text-sm text-stone-400">chevron_right</span>
+      </a>
+      <a href="paket_bundling_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-stone-100 font-medium text-sm text-stone-900">
+        <span>🎁 Paket Bundling & Kafe</span><span class="material-symbols-outlined text-sm text-stone-400">chevron_right</span>
+      </a>
+      <a href="paket_bundling_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-stone-100 font-medium text-sm text-stone-900">
+        <span>⚙️ Mesin Espresso & Grinder</span><span class="material-symbols-outlined text-sm text-stone-400">chevron_right</span>
+      </a>
+      <a href="resep_seduh_majalah_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-stone-100 font-medium text-sm text-stone-900">
+        <span>📖 Resep Seduh & Panduan</span><span class="material-symbols-outlined text-sm text-stone-400">chevron_right</span>
+      </a>
+      <a href="info_toko.html" class="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-stone-100 font-medium text-sm text-stone-900">
+        <span>🏪 Lokasi Toko & Pick-Up</span><span class="material-symbols-outlined text-sm text-stone-400">chevron_right</span>
+      </a>
+    </div>
         </div>
 
         <!-- Smart Omni Search Bar -->
@@ -299,7 +299,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                   <span>Beli Fresh Roast</span>
                   <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
                 </a>
-                <a href="katalog_filter_id.html" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-lg transition-colors">
+                <a href="paket_bundling_id.html" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-lg transition-colors">
                   <span>Lihat Katalog</span>
                 </a>
               </div>
@@ -711,7 +711,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
-            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+            <a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform"><article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80';" alt="Kopi Tubruk Gula Aren Specialty" class="w-full h-full object-cover" https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80';" >
               </div>
@@ -719,7 +719,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">RASIO 1:12 · 94°C</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Tubruk Gula Aren</h3>
               </div>
-            </article>
+            </article></a>
+<a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform">
 
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
@@ -729,7 +730,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">AEROPRESS · 2:10</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">MHW-3BOMBER Eggonaut Aeropress Recipe</h3>
               </div>
-            </article>
+            </article></a>
+<a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform">
 
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
@@ -739,7 +741,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">V60 ICED · 1:15</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Iced Japanese V60</h3>
               </div>
-            </article>
+            </article></a>
+<a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform">
 
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
@@ -749,7 +752,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">COLD BREW · 14 JAM</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Cold Brew Citrus Splash</h3>
               </div>
-            </article>
+            </article></a>
           </div>
         </div>
       </section>
@@ -948,14 +951,14 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">MAJALAH KROMA</span>
               <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Barista Journal &amp; Artikel Pilihan</h2>
             </div>
-            <a href="katalog_filter_id.html" class="font-label text-label-lg text-espresso-charcoal hover:text-light-primary inline-flex items-center gap-1">
+            <a href="resep_seduh_majalah_id.html" class="font-label text-label-lg text-espresso-charcoal hover:text-light-primary inline-flex items-center gap-1">
               <span>Baca Semua Artikel</span>
               <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
             </a>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
-            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+            <a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform"><article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80';" alt="Kedai Kopi RTD" class="w-full h-full object-cover" https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80';" >
               </div>
@@ -963,7 +966,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">BISNIS KOPI</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Cara Buka Kedai Kopi RTD di Toko, dari Resep ke Chiller</h3>
               </div>
-            </article>
+            </article></a>
+<a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform">
 
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
@@ -973,7 +977,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">REKOMENDASI ALAT</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">5 Mesin Espresso Rumahan Terbaik untuk Kado Natal &amp; Akhir Tahun</h3>
               </div>
-            </article>
+            </article></a>
+<a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform">
 
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
@@ -983,7 +988,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">PERAWATAN</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal text-balance">Cara Membersihkan Grinder Manual &amp; Elektrik agar Burr Awet</h3>
               </div>
-            </article>
+            </article></a>
+<a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform">
 
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
@@ -993,7 +999,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <span class="font-mono text-mono-sm text-light-primary">TREN INDUSTRI</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Tren Industri Specialty Coffee 2026: Slow Bar &amp; Fermentasi</h3>
               </div>
-            </article>
+            </article></a>
           </div>
         </div>
       </section>
@@ -1094,4 +1100,22 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 
 
 
+<script id="kategori-mega-btn-script-fixed">
+        document.addEventListener('DOMContentLoaded', function() {
+          var btn = document.getElementById('kategori-mega-btn');
+          var menu = document.getElementById('kategori-mega-menu');
+          if (btn && menu) {
+            btn.onclick = function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              menu.classList.toggle('hidden');
+            };
+            document.addEventListener('click', function(e) {
+              if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.add('hidden');
+              }
+            });
+          }
+        });
+      </script>
 </body></html>

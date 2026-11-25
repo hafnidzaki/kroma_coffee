@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="referrer" content="no-referrer">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paket Bundling & Buka Kafe — KROMA COFFEE ROASTERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Raleway:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    globalThis.tailwind = globalThis.tailwind || {};
+    globalThis.tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'warm-caramel': '#C67C4E',
+            'espresso-charcoal': '#1C140F',
+            'oat-canvas': '#FBF9F8',
+            'light-surface': '#FBF9F8',
+            'light-surface-container-low': '#F6F1EE',
+            'light-surface-container-lowest': '#FFFFFF',
+            'light-outline-variant': '#D8C2B7',
+            'light-on-surface-variant': '#53443B',
+            'light-primary': '#8A4C22'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-oat-canvas text-espresso-charcoal font-sans antialiased min-h-screen flex flex-col">
+  <!-- Top Trust Bar -->
+  <div class="bg-espresso-charcoal text-oat-canvas text-xs py-2 px-4 text-center md:flex md:justify-between max-w-[1320px] mx-auto w-full">
+    <span>🛡️ Garansi Mesin Resmi 2 Tahun | Gratis Ongkir se-Indonesia</span>
+    <span class="hidden md:inline">Konsultasi Buka Kafe: 0812-3456-7890</span>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant shadow-sm">
+    <div class="max-w-[1320px] mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <a href="kroma_homepage_id.html" class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-warm-caramel"></span>
+        <span class="font-serif text-xl font-bold tracking-tight">KROMA COFFEE ROASTERS</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="kroma_homepage_id.html" class="hover:text-warm-caramel">Beranda</a>
+        <a href="katalog_filter_id.html" class="hover:text-warm-caramel">Katalog Biji Kopi</a>
+        <a href="paket_bundling_id.html" class="text-warm-caramel font-bold border-b-2 border-warm-caramel pb-1">Paket Bundling & Kafe</a>
+        <a href="info_toko.html" class="hover:text-warm-caramel">Info Toko</a>
+        <a href="resep_seduh_majalah_id.html" class="hover:text-warm-caramel">Resep & Majalah</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="keranjang_pengiriman_id.html" class="px-4 py-2 rounded-full bg-warm-caramel text-white text-sm font-bold flex items-center gap-2">
+          <span>🛒 Keranjang</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-[1320px] mx-auto px-4 py-8 flex-1">
+    <!-- Breadcrumb -->
+    <div class="text-xs text-stone-500 mb-4">
+      <a href="kroma_homepage_id.html" class="hover:underline">Beranda</a> / <span class="text-stone-800 font-semibold">Paket Bundling & Buka Kafe</span>
+    </div>
+
+    <!-- Header Banner -->
+    <div class="bg-stone-900 text-stone-100 rounded-2xl p-8 mb-10 flex flex-col md:flex-row items-center justify-between gap-6" style="background: linear-gradient(135deg, #1C140F 0%, #382417 100%);">
+      <div class="max-w-2xl">
+        <span class="inline-block px-3 py-1 bg-amber-700/40 text-amber-300 border border-amber-500/30 rounded-full text-xs font-mono uppercase mb-3">PAKET HEMAT & BISNIS</span>
+        <h1 class="text-3xl md:text-4xl font-serif font-bold mb-3 text-amber-50">Paket Bundling Mesin Espresso & Peralatan Kafe</h1>
+        <p class="text-stone-300 text-sm md:text-base leading-relaxed">
+          Mulai dari paket pemula untuk home brewer hingga peralatan komersial lengkap untuk membuka kedai kopi baru. Hemat hingga Rp 3.500.000 dengan garansi resmi dan kalibrasi gratis teknisi Kroma.
+        </p>
+      </div>
+      <div class="text-center md:text-right shrink-0">
+        <a href="#bundling-grid" class="px-6 py-3 bg-[#C67C4E] hover:bg-[#A86338] text-white font-bold rounded-lg inline-block transition">Lihat Semua Paket</a>
+      </div>
+    </div>
+
+    <!-- 4 Major Packages Grid -->
+    <div id="bundling-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Paket 1: Home Barista Pro -->
+      <div class="bg-white border border-stone-200 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="relative h-48 bg-stone-100 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full z-10">HEMAT RP 850.000</span>
+            <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" alt="Home Barista Pro" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-bold">HOME BARISTA</span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-1">Paket Home Barista Pro (Mesin + Grinder)</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Termasuk: Mesin Espresso DeLonghi 15 Bar + Grinder Timemore C3 Max + Tamper Stainless 51mm + Milk Jug 350ml + Free Arabica Gayo 500g.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-100">
+              <span class="text-xs text-stone-400 line-through">Rp 4.700.000</span>
+              <div class="text-xl font-bold text-[#C67C4E]">Rp 3.850.000</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="keranjang_pengiriman_id.html" class="block w-full py-2.5 bg-[#C67C4E] hover:bg-stone-900 text-white text-center text-sm font-bold rounded-lg transition">+ Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Paket 2: Paket Buka Cafe Starter -->
+      <div class="bg-white border-2 border-amber-600/40 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="relative h-48 bg-stone-100 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded-full z-10">PALING POPULER BISNIS</span>
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80" alt="Buka Cafe Starter" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-bold">BISNIS KEDAI KOPI</span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-1">Paket Buka Kafe Starter (Komersial)</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Termasuk: Mesin Komersial 2-Group + Electric Grinder 64mm Flat Burr + Barista Kit Lengkap + Instalasi & Training Barista 2 Hari.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-100">
+              <span class="text-xs text-stone-400 line-through">Rp 28.000.000</span>
+              <div class="text-xl font-bold text-[#C67C4E]">Rp 24.500.000</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="keranjang_pengiriman_id.html" class="block w-full py-2.5 bg-[#1C140F] hover:bg-[#C67C4E] text-white text-center text-sm font-bold rounded-lg transition">+ Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Paket 3: Manual Brew Complete Kit -->
+      <div class="bg-white border border-stone-200 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="relative h-48 bg-stone-100 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full z-10">HEMAT RP 250.000</span>
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="Manual Brew Master" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-bold">MANUAL BREW</span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-1">Paket Manual Brew Master V60</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Termasuk: Dripper V60 Keramik + Server Kaca 600ml + Ketel Leher Angsa Thermometer + Timbangan Digital Timer + 100x Kertas Filter.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-100">
+              <span class="text-xs text-stone-400 line-through">Rp 1.240.000</span>
+              <div class="text-xl font-bold text-[#C67C4E]">Rp 990.000</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="keranjang_pengiriman_id.html" class="block w-full py-2.5 bg-[#C67C4E] hover:bg-stone-900 text-white text-center text-sm font-bold rounded-lg transition">+ Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+      <!-- Paket 4: Cold Brew Komersial -->
+      <div class="bg-white border border-stone-200 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition">
+        <div>
+          <div class="relative h-48 bg-stone-100 overflow-hidden">
+            <span class="absolute top-3 left-3 bg-blue-700 text-white text-xs font-bold px-2.5 py-1 rounded-full z-10">BATCH PRODUKSI</span>
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Cold Brew Batch" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-mono text-amber-800 uppercase font-bold">READY TO DRINK</span>
+            <h3 class="font-serif text-lg font-bold text-stone-900 mt-1">Paket Produksi Cold Brew Botol</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Termasuk: Sistem Ekstraksi Cold Brew 10 Liter + 2kg Arabica House Blend + 50x Botol Kaca Amber 250ml + Saringan Mikro Khusus.
+            </p>
+            <div class="mt-4 pt-3 border-t border-stone-100">
+              <span class="text-xs text-stone-400 line-through">Rp 2.000.000</span>
+              <div class="text-xl font-bold text-[#C67C4E]">Rp 1.650.000</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="keranjang_pengiriman_id.html" class="block w-full py-2.5 bg-[#C67C4E] hover:bg-stone-900 text-white text-center text-sm font-bold rounded-lg transition">+ Tambah ke Keranjang</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Consultation Banner -->
+    <div class="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h4 class="font-serif text-lg font-bold text-amber-900">Butuh Konsultasi Penyesuaian Alat Kafe?</h4>
+        <p class="text-xs text-amber-800">Konsultasikan kebutuhan daya listrik, konsep bar, dan kapasitas harian kedai Anda bersama tim teknisi barista kami.</p>
+      </div>
+      <a href="https://wa.me/6281234567890" target="_blank" class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-lg shrink-0">Hubungi WhatsApp Barista Concierge</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1C140F] text-stone-300 py-8 px-4 mt-12 text-xs border-t border-stone-800">
+    <div class="max-w-[1320px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p>© 2026 Kroma Coffee Roasters Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>
+      <div class="flex gap-4">
+        <a href="kroma_homepage_id.html" class="hover:text-white">Beranda</a>
+        <a href="katalog_filter_id.html" class="hover:text-white">Katalog Biji Kopi</a>
+        <a href="info_toko.html" class="hover:text-white">Info Toko</a>
+        <a href="resep_seduh_majalah_id.html" class="hover:text-white">Resep Seduh</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

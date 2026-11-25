@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokasi Experience Store — KROMA COFFEE ROASTERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Raleway:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-caramel': '#C67C4E',
+        'espresso-charcoal': '#1C140F',
+        'oat-canvas': '#FBF9F8',
+        'accent': '#C67C4E',
+        'success': '#2D6A4F',
+        'warning': '#B45309',
+        'light-primary': '#8A4C22',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#A86338',
+        'light-on-primary-container': '#FFFBFF',
+        'light-secondary': '#795743',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#FFD0B7',
+        'light-on-secondary-container': '#462A19',
+        'light-tertiary': '#00666D',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#168189',
+        'light-on-tertiary-container': '#F5FEFF',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FBF9F8',
+        'light-on-background': '#1C140F',
+        'light-surface': '#FBF9F8',
+        'light-surface-dim': '#E5D7D1',
+        'light-surface-bright': '#FFFFFF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F6F1EE',
+        'light-surface-container': '#EFE8E4',
+        'light-surface-container-high': '#E8DFDA',
+        'light-surface-container-highest': '#E0D5CF',
+        'light-on-surface': '#1C140F',
+        'light-surface-variant': '#F5DED2',
+        'light-on-surface-variant': '#53443B',
+        'light-outline': '#86736A',
+        'light-outline-variant': '#D8C2B7',
+        'light-inverse-surface': '#1C140F',
+        'light-inverse-on-surface': '#FBF9F8',
+        'light-inverse-primary': '#FFB68C',
+        'dark-primary': '#FFB68C',
+        'dark-on-primary': '#522300',
+        'dark-primary-container': '#C97F50',
+        'dark-on-primary-container': '#441B00',
+        'dark-secondary': '#EABDA4',
+        'dark-on-secondary': '#462A19',
+        'dark-secondary-container': '#61422F',
+        'dark-on-secondary-container': '#DBAF97',
+        'dark-tertiary': '#7BD4DD',
+        'dark-on-tertiary': '#00363A',
+        'dark-tertiary-container': '#409EA6',
+        'dark-on-tertiary-container': '#002C30',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#18120F',
+        'dark-on-background': '#EEE0D9',
+        'dark-surface': '#18120F',
+        'dark-surface-dim': '#18120F',
+        'dark-surface-bright': '#403733',
+        'dark-surface-container-lowest': '#130D0A',
+        'dark-surface-container-low': '#211A17',
+        'dark-surface-container': '#251E1A',
+        'dark-surface-container-high': '#302824',
+        'dark-surface-container-highest': '#3B332F',
+        'dark-on-surface': '#EEE0D9',
+        'dark-surface-variant': '#53443B',
+        'dark-on-surface-variant': '#D8C2B7',
+        'dark-outline': '#A08D83',
+        'dark-outline-variant': '#53443B',
+        'dark-inverse-surface': '#EEE0D9',
+        'dark-inverse-on-surface': '#1C140F',
+        'dark-inverse-primary': '#8D4E24',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'section-lg': '64px',
+        'page-margin': '48px',
+      },
+      fontFamily: {
+        'display': ['"Bodoni Moda"', 'sans-serif'],
+        'headline': ['"Bodoni Moda"', 'sans-serif'],
+        'title': ['"Raleway"', 'sans-serif'],
+        'body': ['"Raleway"', 'sans-serif'],
+        'label': ['"Raleway"', 'sans-serif'],
+        'mono': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-1px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md': ['44px', { lineHeight: '50px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '600' }],
+        'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '0px', fontWeight: '500' }],
+        'headline-sm': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '600' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '250ms',
+        'surface-exit': '180ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <style>
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased selection:bg-warm-caramel selection:text-espresso-charcoal">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-gutter-md flex items-center justify-between gap-gutter-lg">
+        <a href="kroma_homepage_id.html" class="flex items-center gap-gutter-sm shrink-0">
+          <span class="w-8 h-8 rounded bg-espresso-charcoal text-oat-canvas inline-flex items-center justify-center font-display text-title-md">K</span>
+          <span class="font-display text-title-lg tracking-tight text-espresso-charcoal" data-design-text-token="title-lg">KROMA COFFEE ROASTERS</span>
+        </a>
+
+        <nav aria-label="Navigasi utama" class="hidden md:flex items-center gap-gutter-lg">
+          <a href="kroma_homepage_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Beranda</a>
+          <a href="katalog_filter_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Katalog</a>
+          <a href="profil_riwayat_pesanan_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Akun Saya</a>
+        </nav>
+
+        <div class="flex items-center gap-gutter-sm shrink-0">
+          <a href="pilih_tipe_transaksi_modal.html" class="hidden sm:inline-flex items-center gap-gutter-xs px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal transition-colors">
+            <span class="material-symbols-outlined text-title-md text-light-primary" aria-hidden="true">storefront</span>
+            <span data-design-text-token="label-md">Click &amp; Collect</span>
+          </a>
+          <a href="keranjang_pengiriman_id.html" aria-label="Keranjang Belanja" class="relative inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+            <span class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm inline-flex items-center justify-center tabular-nums">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-section flex flex-col gap-gutter-xl">
+
+        <!-- Title & City Filter -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter-lg pb-gutter-lg border-b border-light-outline-variant">
+          <div class="flex flex-col gap-gutter-xs max-w-2xl">
+            <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest" data-design-text-token="mono-sm">EXPERIENCE STORE &amp; CLICK-AND-COLLECT</span>
+            <h1 class="font-headline text-headline-lg text-espresso-charcoal text-balance" data-design-text-token="headline-lg">Temukan Kroma Experience Store Terdekat</h1>
+            <p class="font-body text-body-lg text-light-on-surface-variant text-pretty" data-design-text-token="body-lg">
+              Coba langsung mesin espresso, cicipi single origin di slow bar, atau ambil pesanan online Anda dalam 2 jam tanpa ongkos kirim.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-gutter-xs shrink-0" role="group" aria-label="Filter kota">
+            <button type="button" data-city="all" class="city-filter-btn px-gutter-md py-2 rounded-full bg-espresso-charcoal text-oat-canvas font-label text-label-md transition-colors">Semua Kota (4)</button>
+            <button type="button" data-city="jakarta" class="city-filter-btn px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Jakarta</button>
+            <button type="button" data-city="bandung" class="city-filter-btn px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Bandung</button>
+            <button type="button" data-city="surabaya" class="city-filter-btn px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Surabaya</button>
+            <button type="button" data-city="semarang" class="city-filter-btn px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Semarang</button>
+          </div>
+        </div>
+
+        <!-- Selected Store Feedback Banner -->
+        <div id="store-selected-banner" class="hidden rounded-lg border border-success bg-light-surface-container-low p-gutter-md flex flex-col sm:flex-row sm:items-center justify-between gap-gutter-md">
+          <div class="flex items-center gap-gutter-sm">
+            <span class="material-symbols-outlined text-title-lg text-success shrink-0" aria-hidden="true">check_circle</span>
+            <span id="store-selected-text" class="font-body text-body-md text-espresso-charcoal" data-design-text-token="body-md"></span>
+          </div>
+          <a href="katalog_filter_id.html" class="self-start sm:self-auto px-gutter-md py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">
+            Lanjut Belanja di Katalog
+          </a>
+        </div>
+
+        <!-- 4 Store Cards (2x2 Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-xl items-stretch">
+
+          <!-- Store 1: Senopati -->
+          <article data-city="jakarta" class="store-card bg-light-surface-container-lowest border border-light-outline-variant rounded-lg overflow-hidden flex flex-col h-full">
+            <div class="aspect-[16/9] bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCvSviKTeG3b2qvcY5yDjPZiTlBP06s_5mWgg_BKvA7Z3swq-KIrc_8Or4C-zab9eL0NeEgu3lB0SPw1ofZf3eAn3weRWQZZB6_pQOHBx1vNQbBUPAi9LpbkJfsIOqpO1DqOXXOTL3UHJoGYG35MkT9PagDCdyesRlcG8N8nZZEhqRG31csCq17WmqAjtEg_vIO_5ft649FgFPLA6_GVzmGNB0WWS1YDG13SWfqIShHsvStGrCmhyDQIg" alt="Kroma Experience Store Senopati Jakarta" class="w-full h-full object-cover">
+            </div>
+            <div class="p-gutter-lg flex flex-col gap-gutter-md flex-1 justify-between">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span class="font-mono text-mono-sm text-light-primary uppercase" data-design-text-token="mono-sm">JAKARTA SELATAN · FLAGSHIP</span>
+                  <span class="px-gutter-sm py-0.5 rounded-full bg-light-surface-variant font-mono text-mono-sm text-espresso-charcoal tabular-nums">07:00 – 22:00</span>
+                </div>
+                <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">Kroma Senopati (Jakarta)</h2>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan 12190 · (021) 5082-0003
+                </p>
+                <div class="flex flex-wrap gap-gutter-xs pt-gutter-xs">
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Slow Bar</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Roastery Showcase</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Click &amp; Collect 2 Jam</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-light-outline-variant">
+                <button type="button" data-store-name="Kroma Senopati (Jakarta)" class="select-store-btn flex-1 py-2.5 px-gutter-md rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">
+                  Pilih untuk Click &amp; Collect
+                </button>
+                <a href="pilih_tipe_transaksi_modal.html" class="py-2.5 px-gutter-md rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+                  Ubah Tipe
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store 2: Dago -->
+          <article data-city="bandung" class="store-card bg-light-surface-container-lowest border border-light-outline-variant rounded-lg overflow-hidden flex flex-col h-full">
+            <div class="aspect-[16/9] bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAmJgxbtkQp8uiKVRcYxGR4AIho7S_l_2h8FawxldOUGGoUa9OyEHsfd-7XKpEP_JIEz7G6LlEqxBjMsXYTwa1-R7f5j3KotXgmhbv7_it1GjMFrfENr-n2Ip0obdUh5RYYORLhzVvnGG6Q58DWes7sdQQs1ifKcUk3pLmsPL6EsgXG9tesLaWVFoVHl9M01BxRcO-asUezEm9ZA-DXVAQnomYk10cpCxjA18A-Vz9tcoxtLngnKDi_67Qz" alt="Kroma Experience Store Dago Bandung" class="w-full h-full object-cover">
+            </div>
+            <div class="p-gutter-lg flex flex-col gap-gutter-md flex-1 justify-between">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span class="font-mono text-mono-sm text-light-primary uppercase" data-design-text-token="mono-sm">BANDUNG · ACADEMY &amp; BAR</span>
+                  <span class="px-gutter-sm py-0.5 rounded-full bg-light-surface-variant font-mono text-mono-sm text-espresso-charcoal tabular-nums">07:30 – 22:00</span>
+                </div>
+                <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">Kroma Dago (Bandung)</h2>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Jl. Ir. H. Juanda No. 118, Dago, Bandung 40132 · (022) 2501-8890
+                </p>
+                <div class="flex flex-wrap gap-gutter-xs pt-gutter-xs">
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Manual Brew Bar</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Cupping Room</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Click &amp; Collect 2 Jam</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-light-outline-variant">
+                <button type="button" data-store-name="Kroma Dago (Bandung)" class="select-store-btn flex-1 py-2.5 px-gutter-md rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">
+                  Pilih untuk Click &amp; Collect
+                </button>
+                <a href="pilih_tipe_transaksi_modal.html" class="py-2.5 px-gutter-md rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+                  Ubah Tipe
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store 3: Gubeng -->
+          <article data-city="surabaya" class="store-card bg-light-surface-container-lowest border border-light-outline-variant rounded-lg overflow-hidden flex flex-col h-full">
+            <div class="aspect-[16/9] bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAg5keu-uICK1-0gCLhmU1jkmjpn4NuMYz-ARoTXHi-AqgwVzE_5cFnBvDqPHCCYb0Nd_2Ecah90lU09XjvnPOZskQH9_mFZ4fs0KjLQ4nHY36n8H6CjSKq4v7QQqPlTGnW_mhUOBEZsq7G5oFKRGURPYNFu-YoA6L2GEk_AfkdOedvaFcxAtaw55ko9PmncA0TQwz1W-YtI_srF4P6No_BqIqa3cz4udlgA_-Y4n3hXFX86ys8UYSl6RcjEZbIzQ" alt="Kroma Experience Store Gubeng Surabaya" class="w-full h-full object-cover">
+            </div>
+            <div class="p-gutter-lg flex flex-col gap-gutter-md flex-1 justify-between">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span class="font-mono text-mono-sm text-light-primary uppercase" data-design-text-token="mono-sm">SURABAYA · HARDWARE LAB</span>
+                  <span class="px-gutter-sm py-0.5 rounded-full bg-light-surface-variant font-mono text-mono-sm text-espresso-charcoal tabular-nums">08:00 – 21:30</span>
+                </div>
+                <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">Kroma Gubeng (Surabaya)</h2>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Jl. Sumatra No. 34, Gubeng, Surabaya 60281 · (031) 5032-7710
+                </p>
+                <div class="flex flex-wrap gap-gutter-xs pt-gutter-xs">
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Espresso Lab</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Mesin Demo</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Click &amp; Collect 2 Jam</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-light-outline-variant">
+                <button type="button" data-store-name="Kroma Gubeng (Surabaya)" class="select-store-btn flex-1 py-2.5 px-gutter-md rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">
+                  Pilih untuk Click &amp; Collect
+                </button>
+                <a href="pilih_tipe_transaksi_modal.html" class="py-2.5 px-gutter-md rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+                  Ubah Tipe
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store 4: Kota Lama -->
+          <article data-city="semarang" class="store-card bg-light-surface-container-lowest border border-light-outline-variant rounded-lg overflow-hidden flex flex-col h-full">
+            <div class="aspect-[16/9] bg-light-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCuvmFqwzCz6laSrgGLqmwrD7vOd0U6_a4bBayOuHJddi4nu872wd570bCNMF6lLoVw2U1fG302HmYFXid2D-0VCuzEGtmwGeoEAuGfPsMwRffAKIuQqpxBgXCYpUNlSgLDlSSdzrEL-9fuYE7Um31lAX29Af0DggPd516CjEYu_q4C_j0oA7XTDMfNvahKT3YNDcYi1WWEJyl-eJCCy_WBYeIIENEp0YGJxJdWNWPUsDNlBnKFZoeZOw" alt="Kroma Experience Store Kota Lama Semarang" class="w-full h-full object-cover">
+            </div>
+            <div class="p-gutter-lg flex flex-col gap-gutter-md flex-1 justify-between">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span class="font-mono text-mono-sm text-light-primary uppercase" data-design-text-token="mono-sm">SEMARANG · HERITAGE BAR</span>
+                  <span class="px-gutter-sm py-0.5 rounded-full bg-light-surface-variant font-mono text-mono-sm text-espresso-charcoal tabular-nums">08:00 – 21:30</span>
+                </div>
+                <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">Kroma Kota Lama (Semarang)</h2>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Jl. Letjen Suprapto No. 26, Kota Lama, Semarang 50174 · (024) 3548-2219
+                </p>
+                <div class="flex flex-wrap gap-gutter-xs pt-gutter-xs">
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Heritage Slow Bar</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Bean Tasting</span>
+                  <span class="px-gutter-sm py-1 rounded bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">Click &amp; Collect 2 Jam</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-light-outline-variant">
+                <button type="button" data-store-name="Kroma Kota Lama (Semarang)" class="select-store-btn flex-1 py-2.5 px-gutter-md rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">
+                  Pilih untuk Click &amp; Collect
+                </button>
+                <a href="pilih_tipe_transaksi_modal.html" class="py-2.5 px-gutter-md rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+                  Ubah Tipe
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    (function () {
+      const filterBtns = document.querySelectorAll('.city-filter-btn');
+      const storeCards = document.querySelectorAll('.store-card');
+      const selectBtns = document.querySelectorAll('.select-store-btn');
+      const banner = document.getElementById('store-selected-banner');
+      const bannerText = document.getElementById('store-selected-text');
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const city = btn.getAttribute('data-city');
+          filterBtns.forEach(function (b) {
+            if (b === btn) {
+              b.className = 'city-filter-btn px-gutter-md py-2 rounded-full bg-espresso-charcoal text-oat-canvas font-label text-label-md transition-colors';
+            } else {
+              b.className = 'city-filter-btn px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors';
+            }
+          });
+          storeCards.forEach(function (card) {
+            if (city === 'all' || card.getAttribute('data-city') === city) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      selectBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const storeName = btn.getAttribute('data-store-name');
+          try {
+            localStorage.setItem('kroma_transaction_mode', 'pickup');
+            localStorage.setItem('kroma_pickup_store', storeName);
+          } catch (err) {}
+          bannerText.textContent = 'Cabang Click & Collect dipilih: ' + storeName + ' (siap diambil dalam 2 jam).';
+          banner.classList.remove('hidden');
+          banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      });
+    })();
+  </script>
+
+
+
+</body></html>

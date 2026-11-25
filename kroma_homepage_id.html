@@ -1,0 +1,1096 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KROMA COFFEE ROASTERS — Specialty Coffee, Mesin Espresso &amp; Alat Seduh</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-caramel': '#C67C4E',
+        'espresso-charcoal': '#1C140F',
+        'oat-canvas': '#FBF9F8',
+        'accent': '#C67C4E',
+        'success': '#2D6A4F',
+        'warning': '#B45309',
+        'light-primary': '#8A4C22',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#A86338',
+        'light-on-primary-container': '#FFFBFF',
+        'light-secondary': '#795743',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#FFD0B7',
+        'light-on-secondary-container': '#462A19',
+        'light-tertiary': '#00666D',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#168189',
+        'light-on-tertiary-container': '#F5FEFF',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FBF9F8',
+        'light-on-background': '#1C140F',
+        'light-surface': '#FBF9F8',
+        'light-surface-dim': '#E5D7D1',
+        'light-surface-bright': '#FFFFFF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F6F1EE',
+        'light-surface-container': '#EFE8E4',
+        'light-surface-container-high': '#E8DFDA',
+        'light-surface-container-highest': '#E0D5CF',
+        'light-on-surface': '#1C140F',
+        'light-surface-variant': '#F5DED2',
+        'light-on-surface-variant': '#53443B',
+        'light-outline': '#86736A',
+        'light-outline-variant': '#D8C2B7',
+        'light-inverse-surface': '#1C140F',
+        'light-inverse-on-surface': '#FBF9F8',
+        'light-inverse-primary': '#FFB68C',
+        'dark-primary': '#FFB68C',
+        'dark-on-primary': '#522300',
+        'dark-primary-container': '#C97F50',
+        'dark-on-primary-container': '#441B00',
+        'dark-secondary': '#EABDA4',
+        'dark-on-secondary': '#462A19',
+        'dark-secondary-container': '#61422F',
+        'dark-on-secondary-container': '#DBAF97',
+        'dark-tertiary': '#7BD4DD',
+        'dark-on-tertiary': '#00363A',
+        'dark-tertiary-container': '#409EA6',
+        'dark-on-tertiary-container': '#002C30',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#18120F',
+        'dark-on-background': '#EEE0D9',
+        'dark-surface': '#18120F',
+        'dark-surface-dim': '#18120F',
+        'dark-surface-bright': '#403733',
+        'dark-surface-container-lowest': '#130D0A',
+        'dark-surface-container-low': '#211A17',
+        'dark-surface-container': '#251E1A',
+        'dark-surface-container-high': '#302824',
+        'dark-surface-container-highest': '#3B332F',
+        'dark-on-surface': '#EEE0D9',
+        'dark-surface-variant': '#53443B',
+        'dark-on-surface-variant': '#D8C2B7',
+        'dark-outline': '#A08D83',
+        'dark-outline-variant': '#53443B',
+        'dark-inverse-surface': '#EEE0D9',
+        'dark-inverse-on-surface': '#1C140F',
+        'dark-inverse-primary': '#8D4E24',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'section-lg': '64px',
+        'page-margin': '48px',
+      },
+      fontFamily: {
+        'display': ['"Bodoni Moda"', 'sans-serif'],
+        'headline': ['"Bodoni Moda"', 'sans-serif'],
+        'title': ['"Raleway"', 'sans-serif'],
+        'body': ['"Raleway"', 'sans-serif'],
+        'label': ['"Raleway"', 'sans-serif'],
+        'mono': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-1px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md': ['44px', { lineHeight: '50px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '600' }],
+        'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '0px', fontWeight: '500' }],
+        'headline-sm': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '600' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '250ms',
+        'surface-exit': '180ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&amp;family=Raleway:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- 1. TOP TRUST BAR -->
+    <div class="bg-espresso-charcoal text-oat-canvas py-gutter-sm px-page-margin border-b border-dark-outline-variant">
+      <div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-gutter-md">
+        <div class="flex flex-wrap items-center gap-gutter-lg">
+          <span class="inline-flex items-center gap-gutter-xs font-body text-body-sm text-oat-canvas">
+            <span class="material-symbols-outlined text-body-md text-warm-caramel" aria-hidden="true">verified_user</span>
+            <span>Garansi Mesin 2 Tahun</span>
+          </span>
+          <span class="text-dark-outline">|</span>
+          <span class="inline-flex items-center gap-gutter-xs font-body text-body-sm text-oat-canvas">
+            <span class="material-symbols-outlined text-body-md text-warm-caramel" aria-hidden="true">local_shipping</span>
+            <span>Gratis Ongkir se-Indonesia*</span>
+          </span>
+          <span class="text-dark-outline">|</span>
+          <span class="inline-flex items-center gap-gutter-xs font-body text-body-sm text-oat-canvas">
+            <span class="material-symbols-outlined text-body-md text-warm-caramel" aria-hidden="true">workspace_premium</span>
+            <span>Produk 100% Original &amp; Bersertifikat</span>
+          </span>
+        </div>
+        <div class="flex items-center gap-gutter-md">
+          <a href="#footer-kroma" class="inline-flex items-center gap-gutter-xs font-label text-label-md text-oat-canvas hover:text-warm-caramel transition-colors">
+            <span class="material-symbols-outlined text-body-md" aria-hidden="true">smartphone</span>
+            <span>Download Kroma App</span>
+          </a>
+          <span class="text-dark-outline">|</span>
+          <a href="#footer-kroma" aria-label="WhatsApp Kroma Concierge" class="inline-flex items-center gap-gutter-xs font-label text-label-md text-warm-caramel hover:text-oat-canvas transition-colors">
+            <span class="material-symbols-outlined text-body-md" aria-hidden="true">chat</span>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. MAIN NAVBAR & OMNI SEARCH -->
+    <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-gutter-md flex flex-wrap lg:flex-nowrap items-center justify-between gap-gutter-md">
+        <!-- Brand Logo -->
+        <a href="kroma_homepage_id.html" class="flex items-center gap-gutter-sm shrink-0">
+          <span class="w-3 h-3 rounded-full bg-warm-caramel" aria-hidden="true"></span>
+          <span class="font-display text-title-lg text-espresso-charcoal tracking-tight whitespace-nowrap" data-design-text-token="title-lg">KROMA COFFEE ROASTERS</span>
+        </a>
+
+        <!-- Kategori Button (4-square grid icon) -->
+        <div class="relative shrink-0">
+          <button id="kategori-mega-btn" type="button" class="inline-flex items-center gap-gutter-xs px-gutter-md h-10 rounded border border-light-outline-variant bg-light-surface-container-low text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">grid_view</span>
+            <span>Kategori</span>
+          </button>
+
+          <!-- Mega Menu Popover -->
+          <div id="kategori-mega-menu" class="hidden absolute left-0 top-full mt-2 w-64 bg-light-surface-container-lowest border border-light-outline-variant rounded-md p-gutter-sm z-50">
+            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
+              <span>Biji Kopi</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
+            </a>
+            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
+              <span>Grinder</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
+            </a>
+            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
+              <span>Mesin Espresso</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
+            </a>
+            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
+              <span>Manual Brew</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
+            </a>
+            <a href="katalog_filter_id.html" class="flex items-center justify-between px-gutter-md py-2 rounded hover:bg-light-surface-container-low font-label text-label-md text-espresso-charcoal">
+              <span>Sirup &amp; Bahan Baku</span><span class="material-symbols-outlined text-body-md text-light-on-surface-variant" aria-hidden="true">chevron_right</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Smart Omni Search Bar -->
+        <div class="relative flex-1 min-w-0">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-light-on-surface-variant text-title-md pointer-events-none" aria-hidden="true">search</span>
+          <input id="omni-search-input" type="search" placeholder="Cari biji kopi, alat seduh, mesin espresso..." aria-label="Cari biji kopi, alat seduh, mesin espresso" autocomplete="off" class="w-full pl-10 pr-20 py-2.5 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal placeholder:text-light-on-surface-variant font-body text-body-md focus:border-espresso-charcoal focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-caramel">
+          <div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1">
+            <button type="button" aria-label="Pencarian Visual" class="w-7 h-7 rounded inline-flex items-center justify-center text-light-on-surface-variant hover:text-espresso-charcoal">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">photo_camera</span>
+            </button>
+            <button type="button" aria-label="Pencarian Suara" class="w-7 h-7 rounded inline-flex items-center justify-center text-light-on-surface-variant hover:text-espresso-charcoal">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">mic</span>
+            </button>
+          </div>
+
+          <!-- Focus Popover: Pencarian Populer -->
+          <div id="omni-popover" class="hidden absolute left-0 right-0 top-full mt-2 bg-light-surface-container-lowest border border-light-outline-variant rounded-md p-gutter-md z-50">
+            <span class="block font-mono text-mono-sm text-light-on-surface-variant uppercase mb-gutter-sm" data-design-text-token="mono-sm">Pencarian Populer</span>
+            <div class="flex flex-wrap gap-gutter-xs">
+              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Electric Grinder</a>
+              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Single Origin Gayo</a>
+              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">V60 Dripper</a>
+              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Cold Brew Botol</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fulfillment Mode Selector (Tipe Transaksi Widget) -->
+        <a href="pilih_tipe_transaksi_modal.html" class="hidden xl:flex items-center gap-gutter-sm px-gutter-md py-1.5 rounded border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal text-left shrink-0 transition-colors">
+          <span class="material-symbols-outlined text-title-lg text-light-primary shrink-0" aria-hidden="true">local_shipping</span>
+          <div class="flex flex-col">
+            <span class="font-mono text-mono-sm text-light-on-surface-variant" data-design-text-token="mono-sm">Tipe Transaksi</span>
+            <span class="font-label text-label-md text-espresso-charcoal" data-design-text-token="label-md">Pengiriman atau Belanja di Toko ⌵</span>
+          </div>
+        </a>
+
+        <!-- Right Icons & Auth -->
+        <div class="flex items-center gap-gutter-sm shrink-0">
+          <a href="wishlist_favorit_id.html" aria-label="Wishlist" class="inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
+          </a>
+
+          <a href="keranjang_pengiriman_id.html" aria-label="Keranjang Belanja" class="relative inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+            <span id="home-cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm inline-flex items-center justify-center tabular-nums">0</span>
+          </a>
+
+          <a href="masuk_akun_kroma.html" class="px-gutter-sm py-2 font-label text-label-md text-espresso-charcoal hover:text-light-primary transition-colors">Masuk</a>
+          <a href="daftar_akun_kroma.html" class="px-gutter-md py-2 rounded-full bg-warm-caramel text-espresso-charcoal hover:bg-espresso-charcoal hover:text-oat-canvas font-label text-label-md transition-colors">Daftar</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+
+      <!-- 3. HERO CAROUSEL & FLASH SALE SECTION -->
+      <section class="border-b border-light-outline-variant">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section flex flex-col gap-gutter-xl">
+
+          <!-- Dynamic Hero Banner -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center bg-light-surface-container-low border border-light-outline-variant rounded-lg overflow-hidden">
+            <div class="lg:col-span-5 p-gutter-xl flex flex-col gap-gutter-md">
+              <span class="inline-flex items-center self-start px-gutter-md py-1 rounded-full bg-light-surface-variant border border-warm-caramel font-mono text-mono-sm text-espresso-charcoal uppercase tracking-wider">PANEN TERBARU 2026</span>
+              <h1 class="font-display text-display-md-mobile md:text-display-lg text-espresso-charcoal text-balance" data-design-text-token="display-lg">
+                Single Origin Crop Terbaru 2026
+              </h1>
+              <p class="font-body text-body-lg text-light-on-surface-variant text-pretty" data-design-text-token="body-lg">
+                Koleksi panen segar dari Gayo, Mandheling, dan Toraja. Disangrai harian dengan kurva profil Nordik untuk rasa manis dan aroma optimal.
+              </p>
+              <div class="flex flex-wrap items-center gap-gutter-md pt-gutter-xs">
+                <a href="mandheling_arabica_pdp_id.html" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-lg transition-colors">
+                  <span>Beli Fresh Roast</span>
+                  <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+                </a>
+                <a href="katalog_filter_id.html" class="inline-flex items-center gap-gutter-sm px-gutter-lg py-3 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-lg transition-colors">
+                  <span>Lihat Katalog</span>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7 aspect-[16/9] bg-light-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDPWvgn0RUj79UlsVOp5H7zM3YZMCnfItkWPF_l11po6l4DQTLzTt5ggG2Fi02_U62xydVHm6kAvFetSt8BGyKfWHe2SzZVvWc1hHaYAqzK1GcpNYJTp6W8oYUoToqbfgR5FN_WlmJrlmHKIeVGfsXqDA4neqtH48fvS2xcem1qZiZEKNVCBHG8FS0dbOHvvO2ZB6BolRPKwlwD3ggFvv4HG8Uxj6p3WK9Dukz7mxDGrh9V_T26RyIaisY" alt="Single Origin Crop Terbaru 2026 Kroma Coffee Roasters" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- Flash Sale Card Band -->
+          <div class="bg-espresso-charcoal text-oat-canvas rounded-lg p-gutter-xl flex flex-col gap-gutter-lg">
+            <div class="flex flex-wrap items-center justify-between gap-gutter-md">
+              <div class="flex flex-wrap items-center gap-gutter-md">
+                <span class="inline-flex items-center gap-1.5 px-gutter-md py-1.5 rounded bg-light-error text-light-on-error font-mono text-mono-md uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-title-md" aria-hidden="true">bolt</span>
+                  <span>FLASH SALE</span>
+                </span>
+                <div class="inline-flex items-center gap-gutter-sm font-mono text-mono-md text-oat-canvas tabular-nums">
+                  <span class="text-warm-caramel">Dimulai dalam</span>
+                  <span class="px-2 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant">10</span>
+                  <span>:</span>
+                  <span class="px-2 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant">42</span>
+                  <span>:</span>
+                  <span class="px-2 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant">51</span>
+                </div>
+              </div>
+              <a href="katalog_filter_id.html" class="font-label text-label-md text-warm-caramel hover:text-oat-canvas inline-flex items-center gap-1">
+                <span>Lihat Semua Promo</span>
+                <span class="material-symbols-outlined text-body-md" aria-hidden="true">arrow_forward</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md items-stretch">
+              <!-- Flash Item 1 -->
+              <article class="bg-oat-canvas text-espresso-charcoal rounded-md overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                  <div class="relative aspect-square bg-light-surface-container-low">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrA_Y7hmbcP_NU2hJil4IdrGJAMxXPmmG8yOS1KH7m9FAFNoeZSPGasC6tqAfG67rvNujVkaCjmqtrZ5kpzIy21VVhSCfmlr6yCIp7fWrbiZD0QaVXcimh6e3HMbl4L24r62DMeSJTIF9ajXtJMX-2V8d47_FYV0De7fUKteTwnfH8jymsDxjYOTm80-xxV7XPlolWvybVPJstYVlVv1EwPYA3IA_x3REKJlgxtEPpQizZi0p7pUmO50" alt="Mandheling Arabica 200g" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 40%</span>
+                  </div>
+                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                    <h3 class="font-title text-title-md text-espresso-charcoal">Mandheling Arabica 200g</h3>
+                    <div class="flex items-baseline gap-gutter-sm">
+                      <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 95.000</span>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant line-through tabular-nums">Rp 158.000</span>
+                    </div>
+                    <div class="flex flex-col gap-1 pt-1">
+                      <div class="h-1.5 rounded-full bg-light-surface-container-highest overflow-hidden">
+                        <div class="h-full w-4/5 bg-warm-caramel rounded-full"></div>
+                      </div>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant">Tersisa 6 bag</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-gutter-md pt-0">
+                  <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
+                </div>
+              </article>
+
+              <!-- Flash Item 2 -->
+              <article class="bg-oat-canvas text-espresso-charcoal rounded-md overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                  <div class="relative aspect-square bg-light-surface-container-low">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrAwELbsxP9b0nnwMOgxVMq1ZaGBtk7HpM9GFLC1t5iP-9tE4q7tomW6BHXBf-zi2m9YRRI4iTaAySvzLszu9Jz5iL5w24nju-kZE-jm-s8RlkRveuSqSX39Wb1A6-PsIVIy4VCa5MeViYkghHMdIGN2wSUbJYn_q0tA2YS8ARL3TpI3MGrsodIZPoh1X6ZLmJW59C3XhbjbDcDNwxPLubXHn4XDjbLRxdWoye09vxGVCad-fshaiA9VuARpYQ" alt="Timemore C3 Max" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 25%</span>
+                  </div>
+                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                    <h3 class="font-title text-title-md text-espresso-charcoal">Timemore C3 Max</h3>
+                    <div class="flex items-baseline gap-gutter-sm">
+                      <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 1.050.000</span>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant line-through tabular-nums">Rp 1.400.000</span>
+                    </div>
+                    <div class="flex flex-col gap-1 pt-1">
+                      <div class="h-1.5 rounded-full bg-light-surface-container-highest overflow-hidden">
+                        <div class="h-full w-2/3 bg-warm-caramel rounded-full"></div>
+                      </div>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant">Tersisa 12 unit</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-gutter-md pt-0">
+                  <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
+                </div>
+              </article>
+
+              <!-- Flash Item 3 -->
+              <article class="bg-oat-canvas text-espresso-charcoal rounded-md overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                  <div class="relative aspect-square bg-light-surface-container-low">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrBnJvejT3ggdTrwfclqQF5_gbkWL5_dKeBc9qt2dn57MwSNuIqKe-Ord_QkWMXCQ9BqHmNR2zsfvPDEQG1z2Nnej2ggVymll0FqaUZM5dKpvb6tWgXKmyEngqM9-1RefPRM34ArvZotNe2CtsyWvwEud7tmwGo1LKH01SZX5FDE_5uzCa8f1niD_1HQr1AiiSWmqWto9YkhEaIh2JhWq15VfDIMlg3CAc2tLGxPrepCFGMCKJ0" alt="Fellow Stagg EKG Kettle" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 20%</span>
+                  </div>
+                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                    <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Gooseneck Kettle</h3>
+                    <div class="flex items-baseline gap-gutter-sm">
+                      <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 760.000</span>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant line-through tabular-nums">Rp 950.000</span>
+                    </div>
+                    <div class="flex flex-col gap-1 pt-1">
+                      <div class="h-1.5 rounded-full bg-light-surface-container-highest overflow-hidden">
+                        <div class="h-full w-3/4 bg-warm-caramel rounded-full"></div>
+                      </div>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant">Tersisa 8 unit</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-gutter-md pt-0">
+                  <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
+                </div>
+              </article>
+
+              <!-- Flash Item 4 -->
+              <article class="bg-oat-canvas text-espresso-charcoal rounded-md overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                  <div class="relative aspect-square bg-light-surface-container-low">
+                    <img src="https://lh3.googleusercontent.com/aida/ALJJyrAG9D1lEuHo255DE5pH9QiiUDCJtw7Nh0p7VkMxe4joItd1OwE72kJgmutBptDBRh-SfhHHNAZI2nnHC7S4DzKwZ5MNJGB-Gylplns7ZduFdIZRF-fHX4mafxGZ4WbvtuTTxBqSk0cVMy62i3ppCePj7HyuyhVaKZBJNEb-ALZaLvpxlN_F8FiA5gcCC2O15fr1oIvfEX9uibGZu0FOsONZn18pHBRIEHDIAldOpLpA5dKy4w" alt="Gayo Washed 250g" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 30%</span>
+                  </div>
+                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                    <h3 class="font-title text-title-md text-espresso-charcoal">Gayo Washed 250g</h3>
+                    <div class="flex items-baseline gap-gutter-sm">
+                      <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 110.000</span>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant line-through tabular-nums">Rp 155.000</span>
+                    </div>
+                    <div class="flex flex-col gap-1 pt-1">
+                      <div class="h-1.5 rounded-full bg-light-surface-container-highest overflow-hidden">
+                        <div class="h-full w-5/6 bg-warm-caramel rounded-full"></div>
+                      </div>
+                      <span class="font-mono text-mono-sm text-light-on-surface-variant">Tersisa 4 bag</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-gutter-md pt-0">
+                  <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. SHOPPABLE VIDEO REELS SECTION ("KROMA VIDEO") -->
+      <section class="border-b border-light-outline-variant bg-light-surface-container-low">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section">
+          <div class="flex flex-wrap items-end justify-between gap-gutter-md mb-gutter-xl">
+            <div class="flex flex-col gap-gutter-xs">
+              <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">KROMA VIDEO</span>
+              <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Kroma Video — Inspirasi Seduh &amp; Review Alat</h2>
+            </div>
+            <a href="katalog_filter_id.html" class="font-label text-label-lg text-espresso-charcoal hover:text-light-primary inline-flex items-center gap-1">
+              <span>Lihat Semua</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-gutter-md items-stretch">
+            <!-- Video 1 -->
+            <a href="mandheling_arabica_pdp_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAg5keu-uICK1-0gCLhmU1jkmjpn4NuMYz-ARoTXHi-AqgwVzE_5cFnBvDqPHCCYb0Nd_2Ecah90lU09XjvnPOZskQH9_mFZ4fs0KjLQ4nHY36n8H6CjSKq4v7QQqPlTGnW_mhUOBEZsq7G5oFKRGURPYNFu-YoA6L2GEk_AfkdOedvaFcxAtaw55ko9PmncA0TQwz1W-YtI_srF4P6No_BqIqa3cz4udlgA_-Y4n3hXFX86ys8UYSl6RcjEZbIzQ" alt="Kalibrasi Espresso Rumahan" class="w-full h-full object-cover opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">1 Produk</span>
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm tabular-nums">
+                <span class="material-symbols-outlined text-body-sm" aria-hidden="true">visibility</span>14.2k
+              </span>
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-11 h-11 rounded-full bg-oat-canvas text-espresso-charcoal inline-flex items-center justify-center">
+                  <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">play_arrow</span>
+                </span>
+              </span>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md">
+                <p class="font-label text-label-md text-oat-canvas">Kalibrasi Espresso Rumahan Gagal Terus? Ini Triknya</p>
+              </div>
+            </a>
+
+            <!-- Video 2 -->
+            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBssUgfbb6wyYT3mgQ8Cr_kNLhfGTKe4xvS1NHcDGgslOxY5ybccii7ZG3y3lVfphOmhLJRGeYmRdDdYopbhPPv7LPS2Yxv353FJ15_kkmfPq7Xh0Z5jy0zkJfrq3GvGbYGAwCt1K78_1ylSplEGFHYccbULPRMgekyAdiRNqIFpFiZHa8e2VWVfscTNMwLe99_s8UQhwQl5-2AySc55BzKZfyz5ZmsSVVdV6bquAyFDwIvbZVzkg" alt="Review Grinder Single Dose" class="w-full h-full object-cover opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">4 Produk</span>
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm tabular-nums">
+                <span class="material-symbols-outlined text-body-sm" aria-hidden="true">visibility</span>9.8k
+              </span>
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-11 h-11 rounded-full bg-oat-canvas text-espresso-charcoal inline-flex items-center justify-center">
+                  <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">play_arrow</span>
+                </span>
+              </span>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md">
+                <p class="font-label text-label-md text-oat-canvas">Review Grinder Single Dose Presisi 2026</p>
+              </div>
+            </a>
+
+            <!-- Video 3 -->
+            <a href="mandheling_arabica_pdp_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCXqMMwqcYLe2REczV_wLEMB-Y_tVyLIp6WQss8IEOtYMR8hle15pYFy_sDPaCsbho23-tGBtRCnjIdQe1qz_RuT5Ft_qZoGUN4-F63kAgyXQVFM84peoQTQaU1zYiYvnyFr6maxBOgdq6kAhR0N0KunWI5vBsPXwkKoG2tDGrEgHQtCQ9GuH9AO8yWGKpyfrHq7A5HYUew35wGpkXDzfVTbuIY9gXh9OTqsQy72uCzXB36SDGdyEqh" alt="Kopi Flores Washed" class="w-full h-full object-cover opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">1 Produk</span>
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm tabular-nums">
+                <span class="material-symbols-outlined text-body-sm" aria-hidden="true">visibility</span>11.5k
+              </span>
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-11 h-11 rounded-full bg-oat-canvas text-espresso-charcoal inline-flex items-center justify-center">
+                  <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">play_arrow</span>
+                </span>
+              </span>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md">
+                <p class="font-label text-label-md text-oat-canvas">Bongkar Rasa Apel &amp; Teh di Kopi Flores Washed</p>
+              </div>
+            </a>
+
+            <!-- Video 4 -->
+            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCNTRRdjpbst2qvQmzAExBPfxCMoHazyokQC2nhuyPvVmTKc8KoveRchmqcsoPnp5K7RwV7tAmbkbVtd8SlnaqKJDxM1w5tL5-OjQIFJhbK3cxVgzVOtYQCKSpkt1vPbPybOywhjn5zPAjMD6fGbyiRzgvq2Clumko2jviZ_2JXPXqFexqOzXTIOIIHQiPSm0CM6j6FS-zd74Yyb4hgu2ZohqxgIvpbX5EMy-ndTDDCbiCwwenkzuxIa6i4FXw8" alt="Split Shot Espresso vs Lungo" class="w-full h-full object-cover opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">5 Produk</span>
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm tabular-nums">
+                <span class="material-symbols-outlined text-body-sm" aria-hidden="true">visibility</span>18.1k
+              </span>
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-11 h-11 rounded-full bg-oat-canvas text-espresso-charcoal inline-flex items-center justify-center">
+                  <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">play_arrow</span>
+                </span>
+              </span>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md">
+                <p class="font-label text-label-md text-oat-canvas">Split Shot Espresso vs Lungo</p>
+              </div>
+            </a>
+
+            <!-- Video 5 -->
+            <a href="hasil_pencarian_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCuvmFqwzCz6laSrgGLqmwrD7vOd0U6_a4bBayOuHJddi4nu872wd570bCNMF6lLoVw2U1fG302HmYFXid2D-0VCuzEGtmwGeoEAuGfPsMwRffAKIuQqpxBgXCYpUNlSgLDlSSdzrEL-9fuYE7Um31lAX29Af0DggPd516CjEYu_q4C_j0oA7XTDMfNvahKT3YNDcYi1WWEJyl-eJCCy_WBYeIIENEp0YGJxJdWNWPUsDNlBnKFZoeZOw" alt="Dial-In V60 Kopi Gayo" class="w-full h-full object-cover opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">2 Produk</span>
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm tabular-nums">
+                <span class="material-symbols-outlined text-body-sm" aria-hidden="true">visibility</span>7.4k
+              </span>
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-11 h-11 rounded-full bg-oat-canvas text-espresso-charcoal inline-flex items-center justify-center">
+                  <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">play_arrow</span>
+                </span>
+              </span>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md">
+                <p class="font-label text-label-md text-oat-canvas">Cara Dial-In V60 untuk Kopi Gayo</p>
+              </div>
+            </a>
+
+            <!-- Video 6 -->
+            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBnJvejT3ggdTrwfclqQF5_gbkWL5_dKeBc9qt2dn57MwSNuIqKe-Ord_QkWMXCQ9BqHmNR2zsfvPDEQG1z2Nnej2ggVymll0FqaUZM5dKpvb6tWgXKmyEngqM9-1RefPRM34ArvZotNe2CtsyWvwEud7tmwGo1LKH01SZX5FDE_5uzCa8f1niD_1HQr1AiiSWmqWto9YkhEaIh2JhWq15VfDIMlg3CAc2tLGxPrepCFGMCKJ0" alt="Unboxing Kettle Gooseneck" class="w-full h-full object-cover opacity-85">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">1 Produk</span>
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm tabular-nums">
+                <span class="material-symbols-outlined text-body-sm" aria-hidden="true">visibility</span>6.3k
+              </span>
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-11 h-11 rounded-full bg-oat-canvas text-espresso-charcoal inline-flex items-center justify-center">
+                  <span class="material-symbols-outlined text-title-lg" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">play_arrow</span>
+                </span>
+              </span>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md">
+                <p class="font-label text-label-md text-oat-canvas">Unboxing Kettle Gooseneck Presisi</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ZONA PENGGUNA BARU (VOUCHER CLAIM STRIP) -->
+      <section class="border-b border-light-outline-variant bg-light-surface-variant">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section flex flex-col items-center gap-gutter-lg">
+          <div class="text-center flex flex-col gap-gutter-xs">
+            <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">ZONA PENGGUNA BARU</span>
+            <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Klaim Kupon Spesial Member Baru</h2>
+          </div>
+
+          <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-md p-gutter-lg flex items-center justify-between gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary uppercase">SINGLEORIGIN90</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Diskon Member Baru</h3>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Potongan 90% s.d. Rp 40.000</span>
+              </div>
+              <button type="button" onclick="this.textContent=&#39;Diklaim ✓&#39;;" class="px-gutter-md py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md shrink-0">Klaim</button>
+            </div>
+
+            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-md p-gutter-lg flex items-center justify-between gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary uppercase">HOMEBREWER500</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Diskon Home Brewer</h3>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Potongan Rp 500.000</span>
+              </div>
+              <button type="button" onclick="this.textContent=&#39;Diklaim ✓&#39;;" class="px-gutter-md py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md shrink-0">Klaim</button>
+            </div>
+
+            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-md p-gutter-lg flex items-center justify-between gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary uppercase">HOMEBREWER50</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Diskon Belanja</h3>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Potongan Rp 50.000</span>
+              </div>
+              <button type="button" onclick="this.textContent=&#39;Diklaim ✓&#39;;" class="px-gutter-md py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md shrink-0">Klaim</button>
+            </div>
+          </div>
+
+          <a href="daftar_akun_kroma.html" class="inline-flex items-center gap-gutter-sm px-gutter-xl py-3 rounded-full bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-lg transition-colors">
+            <span>Daftar Sekarang &amp; Klaim Kupon</span>
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 6. BRAND PILIHAN RESMI (2x4 Visual Cards) -->
+      <section class="border-b border-light-outline-variant">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section">
+          <div class="flex flex-col gap-gutter-xs mb-gutter-xl">
+            <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">PARTNER RESMI</span>
+            <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Brand Pilihan — Alat Terbaik untuk Memenuhi Kebutuhan Ngopi-mu</h2>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter-md items-stretch">
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBssUgfbb6wyYT3mgQ8Cr_kNLhfGTKe4xvS1NHcDGgslOxY5ybccii7ZG3y3lVfphOmhLJRGeYmRdDdYopbhPPv7LPS2Yxv353FJ15_kkmfPq7Xh0Z5jy0zkJfrq3GvGbYGAwCt1K78_1ylSplEGFHYccbULPRMgekyAdiRNqIFpFiZHa8e2VWVfscTNMwLe99_s8UQhwQl5-2AySc55BzKZfyz5ZmsSVVdV6bquAyFDwIvbZVzkg" alt="Mahlkonig" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Mahlkönig</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Grinder Komersial</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAwELbsxP9b0nnwMOgxVMq1ZaGBtk7HpM9GFLC1t5iP-9tE4q7tomW6BHXBf-zi2m9YRRI4iTaAySvzLszu9Jz5iL5w24nju-kZE-jm-s8RlkRveuSqSX39Wb1A6-PsIVIy4VCa5MeViYkghHMdIGN2wSUbJYn_q0tA2YS8ARL3TpI3MGrsodIZPoh1X6ZLmJW59C3XhbjbDcDNwxPLubXHn4XDjbLRxdWoye09vxGVCad-fshaiA9VuARpYQ" alt="Comandante" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Comandante</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Manual Grinder Legendaris</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBnJvejT3ggdTrwfclqQF5_gbkWL5_dKeBc9qt2dn57MwSNuIqKe-Ord_QkWMXCQ9BqHmNR2zsfvPDEQG1z2Nnej2ggVymll0FqaUZM5dKpvb6tWgXKmyEngqM9-1RefPRM34ArvZotNe2CtsyWvwEud7tmwGo1LKH01SZX5FDE_5uzCa8f1niD_1HQr1AiiSWmqWto9YkhEaIh2JhWq15VfDIMlg3CAc2tLGxPrepCFGMCKJ0" alt="Fellow" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Fellow</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Stagg EKG Kettle</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAg5keu-uICK1-0gCLhmU1jkmjpn4NuMYz-ARoTXHi-AqgwVzE_5cFnBvDqPHCCYb0Nd_2Ecah90lU09XjvnPOZskQH9_mFZ4fs0KjLQ4nHY36n8H6CjSKq4v7QQqPlTGnW_mhUOBEZsq7G5oFKRGURPYNFu-YoA6L2GEk_AfkdOedvaFcxAtaw55ko9PmncA0TQwz1W-YtI_srF4P6No_BqIqa3cz4udlgA_-Y4n3hXFX86ys8UYSl6RcjEZbIzQ" alt="Flair Espresso" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Flair Espresso</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Manual Lever Machine</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCuvmFqwzCz6laSrgGLqmwrD7vOd0U6_a4bBayOuHJddi4nu872wd570bCNMF6lLoVw2U1fG302HmYFXid2D-0VCuzEGtmwGeoEAuGfPsMwRffAKIuQqpxBgXCYpUNlSgLDlSSdzrEL-9fuYE7Um31lAX29Af0DggPd516CjEYu_q4C_j0oA7XTDMfNvahKT3YNDcYi1WWEJyl-eJCCy_WBYeIIENEp0YGJxJdWNWPUsDNlBnKFZoeZOw" alt="Hario Japan" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Hario Japan</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">V60 &amp; Server</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCR6Qgs0Gl4n4AC_4c73S6XILDokURKsRS_gPkrT6TolCj7LD8DmdwsPAdSOLRnULV1kKwFMZhkp7SM8DI5ll6AUd9hhw5prSYtjxWq0bR5QJY9zlS9SPtGvAQwd3DX_4lN0ViY4qbrjUEkB5tvb1snCOgqB0qS1sT3pRSeumGRGoTMHjo_yT78UezjH1q04z_fYxELbi2KWr6JwyB2UszHVTI9gAdF8aeQBrVg_vuBqihHmDeUqLE6pbJQpZSl" alt="AeroPress" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">AeroPress</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Immersion Travel Brewer</span>
+              </div>
+            </a>
+
+            <a href="mandheling_arabica_pdp_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrA_Y7hmbcP_NU2hJil4IdrGJAMxXPmmG8yOS1KH7m9FAFNoeZSPGasC6tqAfG67rvNujVkaCjmqtrZ5kpzIy21VVhSCfmlr6yCIp7fWrbiZD0QaVXcimh6e3HMbl4L24r62DMeSJTIF9ajXtJMX-2V8d47_FYV0De7fUKteTwnfH8jymsDxjYOTm80-xxV7XPlolWvybVPJstYVlVv1EwPYA3IA_x3REKJlgxtEPpQizZi0p7pUmO50" alt="Kroma Coffee Roasters" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Kroma Roasters</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Single Origin Nusantara</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="relative rounded-md overflow-hidden aspect-[4/3] bg-espresso-charcoal border border-light-outline-variant group">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAmJgxbtkQp8uiKVRcYxGR4AIho7S_l_2h8FawxldOUGGoUa9OyEHsfd-7XKpEP_JIEz7G6LlEqxBjMsXYTwa1-R7f5j3KotXgmhbv7_it1GjMFrfENr-n2Ip0obdUh5RYYORLhzVvnGG6Q58DWes7sdQQs1ifKcUk3pLmsPL6EsgXG9tesLaWVFoVHl9M01BxRcO-asUezEm9ZA-DXVAQnomYk10cpCxjA18A-Vz9tcoxtLngnKDi_67Qz" alt="Kees Van Der Westen" class="w-full h-full object-cover opacity-75">
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-gutter-md flex flex-col">
+                <span class="font-display text-title-lg text-oat-canvas">Kees Van Der Westen</span>
+                <span class="font-body text-body-sm text-oat-canvas/90">Spirit &amp; Mirage Espresso</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. RESEP SEDUH KOPI TERBAIK (BREWING GUIDES) -->
+      <section class="border-b border-light-outline-variant bg-light-surface-container-low">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md mb-gutter-xl">
+            <div class="flex flex-col gap-gutter-xs max-w-2xl">
+              <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">BREWING GUIDES</span>
+              <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Resep Seduh Kopi Terbaik — Pelajari cara membuat kopi istimewa seperti barista profesional!</h2>
+            </div>
+            <div class="flex flex-wrap gap-gutter-xs shrink-0">
+              <button type="button" class="px-gutter-md py-2 rounded-full bg-espresso-charcoal text-oat-canvas font-label text-label-md">Resep Seduh Ahli Kopi</button>
+              <button type="button" class="px-gutter-md py-2 rounded-full border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md">Resep Seduh Champion</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrDYeK7DBHIHFwYYhJ2lc10TQjsy7cFlA0l1NCH27CskNQxbYmjtPW80L16duFeAPTbjhNN_wPaZK_UZTDFe9G98Poc7S-XNBU_01LCz0-k2VAtS6uu1GZbm4b4CrrE8cbwl4aIwGOaBGpt1oTdMGXUysDJ7nbu64ZfjlKs7IvrcvO4ts3rnwtoMbHRTbod3mFzUHVgSN__a_IUFOUm9wFdc6-VKKe9MZDGOBgNqd7dWd68ZummbcPcqig" alt="Kopi Tubruk Gula Aren Specialty" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">RASIO 1:12 · 94°C</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Tubruk Gula Aren</h3>
+              </div>
+            </article>
+
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAwELbsxP9b0nnwMOgxVMq1ZaGBtk7HpM9GFLC1t5iP-9tE4q7tomW6BHXBf-zi2m9YRRI4iTaAySvzLszu9Jz5iL5w24nju-kZE-jm-s8RlkRveuSqSX39Wb1A6-PsIVIy4VCa5MeViYkghHMdIGN2wSUbJYn_q0tA2YS8ARL3TpI3MGrsodIZPoh1X6ZLmJW59C3XhbjbDcDNwxPLubXHn4XDjbLRxdWoye09vxGVCad-fshaiA9VuARpYQ" alt="MHW-3BOMBER Eggonaut Aeropress Recipe" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">AEROPRESS · 2:10</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">MHW-3BOMBER Eggonaut Aeropress Recipe</h3>
+              </div>
+            </article>
+
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCR6Qgs0Gl4n4AC_4c73S6XILDokURKsRS_gPkrT6TolCj7LD8DmdwsPAdSOLRnULV1kKwFMZhkp7SM8DI5ll6AUd9hhw5prSYtjxWq0bR5QJY9zlS9SPtGvAQwd3DX_4lN0ViY4qbrjUEkB5tvb1snCOgqB0qS1sT3pRSeumGRGoTMHjo_yT78UezjH1q04z_fYxELbi2KWr6JwyB2UszHVTI9gAdF8aeQBrVg_vuBqihHmDeUqLE6pbJQpZSl" alt="Iced Japanese Drip Coffee V60" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">V60 ICED · 1:15</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Iced Japanese V60</h3>
+              </div>
+            </article>
+
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAG9D1lEuHo255DE5pH9QiiUDCJtw7Nh0p7VkMxe4joItd1OwE72kJgmutBptDBRh-SfhHHNAZI2nnHC7S4DzKwZ5MNJGB-Gylplns7ZduFdIZRF-fHX4mafxGZ4WbvtuTTxBqSk0cVMy62i3ppCePj7HyuyhVaKZBJNEb-ALZaLvpxlN_F8FiA5gcCC2O15fr1oIvfEX9uibGZu0FOsONZn18pHBRIEHDIAldOpLpA5dKy4w" alt="Cold Brew Citrus Splash" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">COLD BREW · 14 JAM</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Cold Brew Citrus Splash</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. SEMUA LOKASI TOKO KAMI (STORE LOCATOR & CLICK-AND-COLLECT HUB) -->
+      <section class="border-b border-light-outline-variant">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section">
+          <div class="flex flex-col gap-gutter-xs max-w-3xl mb-gutter-xl">
+            <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">CLICK &amp; COLLECT HUB</span>
+            <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Semua Lokasi Toko Kami — Penuhi kebutuhan ngopi kamu di toko kami atau pesan online lalu ambil di toko!</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+            <!-- Store 1 -->
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col justify-between h-full">
+              <div>
+                <div class="aspect-[4/3] bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrCvSviKTeG3b2qvcY5yDjPZiTlBP06s_5mWgg_BKvA7Z3swq-KIrc_8Or4C-zab9eL0NeEgu3lB0SPw1ofZf3eAn3weRWQZZB6_pQOHBx1vNQbBUPAi9LpbkJfsIOqpO1DqOXXOTL3UHJoGYG35MkT9PagDCdyesRlcG8N8nZZEhqRG31csCq17WmqAjtEg_vIO_5ft649FgFPLA6_GVzmGNB0WWS1YDG13SWfqIShHsvStGrCmhyDQIg" alt="Kroma Experience Store Senopati" class="w-full h-full object-cover">
+                </div>
+                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Experience Store - Senopati (Jakarta Selatan)</h3>
+                  <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 09:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="p-gutter-md pt-0">
+                <a href="katalog_filter_id.html" class="block text-center py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">Info Toko &amp; Ambil di Sini</a>
+              </div>
+            </article>
+
+            <!-- Store 2 -->
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col justify-between h-full">
+              <div>
+                <div class="aspect-[4/3] bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrAmJgxbtkQp8uiKVRcYxGR4AIho7S_l_2h8FawxldOUGGoUa9OyEHsfd-7XKpEP_JIEz7G6LlEqxBjMsXYTwa1-R7f5j3KotXgmhbv7_it1GjMFrfENr-n2Ip0obdUh5RYYORLhzVvnGG6Q58DWes7sdQQs1ifKcUk3pLmsPL6EsgXG9tesLaWVFoVHl9M01BxRcO-asUezEm9ZA-DXVAQnomYk10cpCxjA18A-Vz9tcoxtLngnKDi_67Qz" alt="Kroma Roastery Hub Dago" class="w-full h-full object-cover">
+                </div>
+                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Roastery Hub - Dago (Bandung)</h3>
+                  <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 08:00 - 21:00</span>
+                </div>
+              </div>
+              <div class="p-gutter-md pt-0">
+                <a href="katalog_filter_id.html" class="block text-center py-2 rounded border border-light-outline-variant text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Info Toko</a>
+              </div>
+            </article>
+
+            <!-- Store 3 -->
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col justify-between h-full">
+              <div>
+                <div class="aspect-[4/3] bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrCvSviKTeG3b2qvcY5yDjPZiTlBP06s_5mWgg_BKvA7Z3swq-KIrc_8Or4C-zab9eL0NeEgu3lB0SPw1ofZf3eAn3weRWQZZB6_pQOHBx1vNQbBUPAi9LpbkJfsIOqpO1DqOXXOTL3UHJoGYG35MkT9PagDCdyesRlcG8N8nZZEhqRG31csCq17WmqAjtEg_vIO_5ft649FgFPLA6_GVzmGNB0WWS1YDG13SWfqIShHsvStGrCmhyDQIg" alt="Kroma Flagship Store Surabaya" class="w-full h-full object-cover">
+                </div>
+                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Flagship Store - Surabaya (Gubeng)</h3>
+                  <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 09:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="p-gutter-md pt-0">
+                <a href="katalog_filter_id.html" class="block text-center py-2 rounded border border-light-outline-variant text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Info Toko</a>
+              </div>
+            </article>
+
+            <!-- Store 4 -->
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col justify-between h-full">
+              <div>
+                <div class="aspect-[4/3] bg-light-surface-container-low">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrAmJgxbtkQp8uiKVRcYxGR4AIho7S_l_2h8FawxldOUGGoUa9OyEHsfd-7XKpEP_JIEz7G6LlEqxBjMsXYTwa1-R7f5j3KotXgmhbv7_it1GjMFrfENr-n2Ip0obdUh5RYYORLhzVvnGG6Q58DWes7sdQQs1ifKcUk3pLmsPL6EsgXG9tesLaWVFoVHl9M01BxRcO-asUezEm9ZA-DXVAQnomYk10cpCxjA18A-Vz9tcoxtLngnKDi_67Qz" alt="Kroma Heritage Store Semarang" class="w-full h-full object-cover">
+                </div>
+                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Heritage Store - Semarang (Kota Lama)</h3>
+                  <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 09:00 - 20:00</span>
+                </div>
+              </div>
+              <div class="p-gutter-md pt-0">
+                <a href="katalog_filter_id.html" class="block text-center py-2 rounded border border-light-outline-variant text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Info Toko</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. TEMUKAN YANG ANDA INGINKAN (6 Curated Shopping Packages) -->
+      <section class="border-b border-light-outline-variant bg-light-surface-container-low">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section">
+          <div class="flex flex-col gap-gutter-xs mb-gutter-xl">
+            <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">PAKET PILIHAN</span>
+            <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Temukan yang Anda Inginkan</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter-md items-stretch">
+            <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCuvmFqwzCz6laSrgGLqmwrD7vOd0U6_a4bBayOuHJddi4nu872wd570bCNMF6lLoVw2U1fG302HmYFXid2D-0VCuzEGtmwGeoEAuGfPsMwRffAKIuQqpxBgXCYpUNlSgLDlSSdzrEL-9fuYE7Um31lAX29Af0DggPd516CjEYu_q4C_j0oA7XTDMfNvahKT3YNDcYi1WWEJyl-eJCCy_WBYeIIENEp0YGJxJdWNWPUsDNlBnKFZoeZOw" alt="Starter Kit" class="w-20 h-20 rounded object-cover shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="font-title text-title-md text-espresso-charcoal">Baru Mau Mulai Ngopi? (Starter Kit)</span>
+                <span class="font-body text-body-sm text-light-on-surface-variant">V60, timbangan, dan biji kopi 200g</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAg5keu-uICK1-0gCLhmU1jkmjpn4NuMYz-ARoTXHi-AqgwVzE_5cFnBvDqPHCCYb0Nd_2Ecah90lU09XjvnPOZskQH9_mFZ4fs0KjLQ4nHY36n8H6CjSKq4v7QQqPlTGnW_mhUOBEZsq7G5oFKRGURPYNFu-YoA6L2GEk_AfkdOedvaFcxAtaw55ko9PmncA0TQwz1W-YtI_srF4P6No_BqIqa3cz4udlgA_-Y4n3hXFX86ys8UYSl6RcjEZbIzQ" alt="Bundling Mesin Grinder" class="w-20 h-20 rounded object-cover shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="font-title text-title-md text-espresso-charcoal">Paket Bundling Mesin + Grinder</span>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Hemat hingga Rp 1.500.000</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAmJgxbtkQp8uiKVRcYxGR4AIho7S_l_2h8FawxldOUGGoUa9OyEHsfd-7XKpEP_JIEz7G6LlEqxBjMsXYTwa1-R7f5j3KotXgmhbv7_it1GjMFrfENr-n2Ip0obdUh5RYYORLhzVvnGG6Q58DWes7sdQQs1ifKcUk3pLmsPL6EsgXG9tesLaWVFoVHl9M01BxRcO-asUezEm9ZA-DXVAQnomYk10cpCxjA18A-Vz9tcoxtLngnKDi_67Qz" alt="Paket Buka Cafe" class="w-20 h-20 rounded object-cover shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="font-title text-title-md text-espresso-charcoal">Paket Buka Cafe (Komersial)</span>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Konsultasi bar &amp; instalasi teknisi</span>
+              </div>
+            </a>
+
+            <a href="mandheling_arabica_pdp_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCXqMMwqcYLe2REczV_wLEMB-Y_tVyLIp6WQss8IEOtYMR8hle15pYFy_sDPaCsbho23-tGBtRCnjIdQe1qz_RuT5Ft_qZoGUN4-F63kAgyXQVFM84peoQTQaU1zYiYvnyFr6maxBOgdq6kAhR0N0KunWI5vBsPXwkKoG2tDGrEgHQtCQ9GuH9AO8yWGKpyfrHq7A5HYUew35wGpkXDzfVTbuIY9gXh9OTqsQy72uCzXB36SDGdyEqh" alt="Subscription" class="w-20 h-20 rounded object-cover shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="font-title text-title-md text-espresso-charcoal">Langganan Kopi Berkala (Subscription)</span>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Kirim rutin tiap 2 minggu · Diskon 15%</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBssUgfbb6wyYT3mgQ8Cr_kNLhfGTKe4xvS1NHcDGgslOxY5ybccii7ZG3y3lVfphOmhLJRGeYmRdDdYopbhPPv7LPS2Yxv353FJ15_kkmfPq7Xh0Z5jy0zkJfrq3GvGbYGAwCt1K78_1ylSplEGFHYccbULPRMgekyAdiRNqIFpFiZHa8e2VWVfscTNMwLe99_s8UQhwQl5-2AySc55BzKZfyz5ZmsSVVdV6bquAyFDwIvbZVzkg" alt="Pre-Order Import" class="w-20 h-20 rounded object-cover shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="font-title text-title-md text-espresso-charcoal">Produk Pre-Order Import</span>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Alat edisi terbatas Eropa &amp; Jepang</span>
+              </div>
+            </a>
+
+            <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCR6Qgs0Gl4n4AC_4c73S6XILDokURKsRS_gPkrT6TolCj7LD8DmdwsPAdSOLRnULV1kKwFMZhkp7SM8DI5ll6AUd9hhw5prSYtjxWq0bR5QJY9zlS9SPtGvAQwd3DX_4lN0ViY4qbrjUEkB5tvb1snCOgqB0qS1sT3pRSeumGRGoTMHjo_yT78UezjH1q04z_fYxELbi2KWr6JwyB2UszHVTI9gAdF8aeQBrVg_vuBqihHmDeUqLE6pbJQpZSl" alt="Kopi Ala Kafe di Rumah" class="w-20 h-20 rounded object-cover shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="font-title text-title-md text-espresso-charcoal">Kopi Ala Kafe di Rumah</span>
+                <span class="font-body text-body-sm text-light-on-surface-variant">Sirup, susu oat, dan espresso blend</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. PROMO SPESIFIK & KOLEKSI PILIHAN -->
+      <section class="border-b border-light-outline-variant">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section grid grid-cols-1 lg:grid-cols-2 gap-gutter-xl">
+          <!-- Row 1 -->
+          <div class="bg-light-surface-container-low border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+            <div class="flex items-center justify-between">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal">Mesin Kopi Espresso Harga di Bawah 5 Juta!</h2>
+              <a href="katalog_filter_id.html" class="font-label text-label-md text-light-primary hover:underline shrink-0">Lihat Semua</a>
+            </div>
+            <div class="grid grid-cols-2 gap-gutter-md">
+              <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant rounded p-gutter-md flex flex-col gap-gutter-xs">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAg5keu-uICK1-0gCLhmU1jkmjpn4NuMYz-ARoTXHi-AqgwVzE_5cFnBvDqPHCCYb0Nd_2Ecah90lU09XjvnPOZskQH9_mFZ4fs0KjLQ4nHY36n8H6CjSKq4v7QQqPlTGnW_mhUOBEZsq7G5oFKRGURPYNFu-YoA6L2GEk_AfkdOedvaFcxAtaw55ko9PmncA0TQwz1W-YtI_srF4P6No_BqIqa3cz4udlgA_-Y4n3hXFX86ys8UYSl6RcjEZbIzQ" alt="DeLonghi Dedica" class="aspect-[4/3] rounded object-cover">
+                <span class="font-title text-title-md text-espresso-charcoal">DeLonghi Dedica Arte</span>
+                <span class="font-mono text-mono-md text-light-primary tabular-nums">Rp 4.490.000</span>
+              </a>
+              <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant rounded p-gutter-md flex flex-col gap-gutter-xs">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBssUgfbb6wyYT3mgQ8Cr_kNLhfGTKe4xvS1NHcDGgslOxY5ybccii7ZG3y3lVfphOmhLJRGeYmRdDdYopbhPPv7LPS2Yxv353FJ15_kkmfPq7Xh0Z5jy0zkJfrq3GvGbYGAwCt1K78_1ylSplEGFHYccbULPRMgekyAdiRNqIFpFiZHa8e2VWVfscTNMwLe99_s8UQhwQl5-2AySc55BzKZfyz5ZmsSVVdV6bquAyFDwIvbZVzkg" alt="Kroma Espresso Maker" class="aspect-[4/3] rounded object-cover">
+                <span class="font-title text-title-md text-espresso-charcoal">Kroma Espresso Maker</span>
+                <span class="font-mono text-mono-md text-light-primary tabular-nums">Rp 3.850.000</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="bg-light-surface-container-low border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+            <div class="flex items-center justify-between">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal">Alat Seduh untuk Pemula</h2>
+              <a href="katalog_filter_id.html" class="font-label text-label-md text-light-primary hover:underline shrink-0">Lihat Semua</a>
+            </div>
+            <div class="grid grid-cols-3 gap-gutter-sm">
+              <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant rounded p-gutter-sm flex flex-col gap-gutter-xs">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCuvmFqwzCz6laSrgGLqmwrD7vOd0U6_a4bBayOuHJddi4nu872wd570bCNMF6lLoVw2U1fG302HmYFXid2D-0VCuzEGtmwGeoEAuGfPsMwRffAKIuQqpxBgXCYpUNlSgLDlSSdzrEL-9fuYE7Um31lAX29Af0DggPd516CjEYu_q4C_j0oA7XTDMfNvahKT3YNDcYi1WWEJyl-eJCCy_WBYeIIENEp0YGJxJdWNWPUsDNlBnKFZoeZOw" alt="V60 Dripper" class="aspect-square rounded object-cover">
+                <span class="font-label text-label-md text-espresso-charcoal">V60 Dripper</span>
+                <span class="font-mono text-mono-sm text-light-primary tabular-nums">Rp 215.000</span>
+              </a>
+              <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant rounded p-gutter-sm flex flex-col gap-gutter-xs">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBnJvejT3ggdTrwfclqQF5_gbkWL5_dKeBc9qt2dn57MwSNuIqKe-Ord_QkWMXCQ9BqHmNR2zsfvPDEQG1z2Nnej2ggVymll0FqaUZM5dKpvb6tWgXKmyEngqM9-1RefPRM34ArvZotNe2CtsyWvwEud7tmwGo1LKH01SZX5FDE_5uzCa8f1niD_1HQr1AiiSWmqWto9YkhEaIh2JhWq15VfDIMlg3CAc2tLGxPrepCFGMCKJ0" alt="French Press" class="aspect-square rounded object-cover">
+                <span class="font-label text-label-md text-espresso-charcoal">French Press</span>
+                <span class="font-mono text-mono-sm text-light-primary tabular-nums">Rp 280.000</span>
+              </a>
+              <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant rounded p-gutter-sm flex flex-col gap-gutter-xs">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCR6Qgs0Gl4n4AC_4c73S6XILDokURKsRS_gPkrT6TolCj7LD8DmdwsPAdSOLRnULV1kKwFMZhkp7SM8DI5ll6AUd9hhw5prSYtjxWq0bR5QJY9zlS9SPtGvAQwd3DX_4lN0ViY4qbrjUEkB5tvb1snCOgqB0qS1sT3pRSeumGRGoTMHjo_yT78UezjH1q04z_fYxELbi2KWr6JwyB2UszHVTI9gAdF8aeQBrVg_vuBqihHmDeUqLE6pbJQpZSl" alt="Server Kaca" class="aspect-square rounded object-cover">
+                <span class="font-label text-label-md text-espresso-charcoal">Server Kaca</span>
+                <span class="font-mono text-mono-sm text-light-primary tabular-nums">Rp 165.000</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. MAJALAH KROMA (BARISTA JOURNAL & ARTICLES) -->
+      <section class="bg-light-surface-container-low">
+        <div class="max-w-[1320px] mx-auto px-page-margin py-section">
+          <div class="flex flex-wrap items-end justify-between gap-gutter-md mb-gutter-xl">
+            <div class="flex flex-col gap-gutter-xs">
+              <span class="font-mono text-mono-sm text-light-primary uppercase tracking-widest">MAJALAH KROMA</span>
+              <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Barista Journal &amp; Artikel Pilihan</h2>
+            </div>
+            <a href="katalog_filter_id.html" class="font-label text-label-lg text-espresso-charcoal hover:text-light-primary inline-flex items-center gap-1">
+              <span>Baca Semua Artikel</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCvSviKTeG3b2qvcY5yDjPZiTlBP06s_5mWgg_BKvA7Z3swq-KIrc_8Or4C-zab9eL0NeEgu3lB0SPw1ofZf3eAn3weRWQZZB6_pQOHBx1vNQbBUPAi9LpbkJfsIOqpO1DqOXXOTL3UHJoGYG35MkT9PagDCdyesRlcG8N8nZZEhqRG31csCq17WmqAjtEg_vIO_5ft649FgFPLA6_GVzmGNB0WWS1YDG13SWfqIShHsvStGrCmhyDQIg" alt="Kedai Kopi RTD" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">BISNIS KOPI</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Cara Buka Kedai Kopi RTD di Toko, dari Resep ke Chiller</h3>
+              </div>
+            </article>
+
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAg5keu-uICK1-0gCLhmU1jkmjpn4NuMYz-ARoTXHi-AqgwVzE_5cFnBvDqPHCCYb0Nd_2Ecah90lU09XjvnPOZskQH9_mFZ4fs0KjLQ4nHY36n8H6CjSKq4v7QQqPlTGnW_mhUOBEZsq7G5oFKRGURPYNFu-YoA6L2GEk_AfkdOedvaFcxAtaw55ko9PmncA0TQwz1W-YtI_srF4P6No_BqIqa3cz4udlgA_-Y4n3hXFX86ys8UYSl6RcjEZbIzQ" alt="Mesin Espresso Rumahan" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">REKOMENDASI ALAT</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">5 Mesin Espresso Rumahan Terbaik untuk Kado Natal &amp; Akhir Tahun</h3>
+              </div>
+            </article>
+
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAwELbsxP9b0nnwMOgxVMq1ZaGBtk7HpM9GFLC1t5iP-9tE4q7tomW6BHXBf-zi2m9YRRI4iTaAySvzLszu9Jz5iL5w24nju-kZE-jm-s8RlkRveuSqSX39Wb1A6-PsIVIy4VCa5MeViYkghHMdIGN2wSUbJYn_q0tA2YS8ARL3TpI3MGrsodIZPoh1X6ZLmJW59C3XhbjbDcDNwxPLubXHn4XDjbLRxdWoye09vxGVCad-fshaiA9VuARpYQ" alt="Membersihkan Grinder" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">PERAWATAN</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal text-balance">Cara Membersihkan Grinder Manual &amp; Elektrik agar Burr Awet</h3>
+              </div>
+            </article>
+
+            <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
+              <div class="aspect-[4/3] bg-light-surface-container-low">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrAmJgxbtkQp8uiKVRcYxGR4AIho7S_l_2h8FawxldOUGGoUa9OyEHsfd-7XKpEP_JIEz7G6LlEqxBjMsXYTwa1-R7f5j3KotXgmhbv7_it1GjMFrfENr-n2Ip0obdUh5RYYORLhzVvnGG6Q58DWes7sdQQs1ifKcUk3pLmsPL6EsgXG9tesLaWVFoVHl9M01BxRcO-asUezEm9ZA-DXVAQnomYk10cpCxjA18A-Vz9tcoxtLngnKDi_67Qz" alt="Tren Specialty Coffee 2026" class="w-full h-full object-cover">
+              </div>
+              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-primary">TREN INDUSTRI</span>
+                <h3 class="font-title text-title-md text-espresso-charcoal">Tren Industri Specialty Coffee 2026: Slow Bar &amp; Fermentasi</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 12. HIGH-CONTRAST DARK FOOTER -->
+    <footer id="footer-kroma" class="bg-espresso-charcoal text-oat-canvas">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-section-lg grid grid-cols-1 md:grid-cols-12 gap-gutter-xl border-b border-dark-outline-variant">
+        <div class="md:col-span-4 flex flex-col gap-gutter-md">
+          <div class="flex items-center gap-gutter-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-warm-caramel" aria-hidden="true"></span>
+            <span class="font-display text-headline-sm text-oat-canvas">KROMA COFFEE ROASTERS</span>
+          </div>
+          <p class="font-body text-body-md text-dark-on-surface-variant max-w-sm">
+            Manifesto Kroma Coffee: Menghubungkan petani kopi spesialti Nusantara dengan penyeduh rumahan maupun profesional melalui sangrai presisi dan peralatan terkalibrasi.
+          </p>
+          <div class="flex flex-col gap-gutter-xs pt-gutter-xs">
+            <span class="font-mono text-mono-sm text-warm-caramel uppercase">Customer Hotline &amp; Concierge</span>
+            <span class="font-mono text-mono-md text-oat-canvas tabular-nums">(021) 5082-0003 · WhatsApp Barista Concierge</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-gutter-sm">
+          <span class="font-mono text-mono-sm text-warm-caramel uppercase">Official Payment Gateways</span>
+          <div class="flex flex-wrap gap-gutter-xs pt-gutter-xs">
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">BCA</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">Mandiri</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">BNI</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">BRI</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">QRIS</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">GoPay</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">OVO</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">Visa</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">Mastercard</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-gutter-sm">
+          <span class="font-mono text-mono-sm text-warm-caramel uppercase">Official Logistics</span>
+          <div class="flex flex-wrap gap-gutter-xs pt-gutter-xs">
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">JNE</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">SiCepat</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">GoSend Instant</span>
+            <span class="px-2.5 py-1 rounded bg-dark-surface-container-high border border-dark-outline-variant font-mono text-mono-sm text-oat-canvas">GrabExpress</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1320px] mx-auto px-page-margin py-gutter-lg flex flex-wrap items-center justify-between gap-gutter-md">
+        <span class="font-body text-body-sm text-dark-on-surface-variant">Copyright © 2026 PT Kroma Kopi Kreasi Nusantara.</span>
+        <span class="font-mono text-mono-sm text-dark-on-surface-variant">SENOPATI · DAGO · GUBENG · KOTA LAMA</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var katBtn = document.getElementById('kategori-mega-btn');
+      var katMenu = document.getElementById('kategori-mega-menu');
+      if (katBtn && katMenu) {
+        katBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          katMenu.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function (e) {
+          if (!katMenu.contains(e.target) && !katBtn.contains(e.target)) {
+            katMenu.classList.add('hidden');
+          }
+        });
+      }
+
+      var searchIn = document.getElementById('omni-search-input');
+      var omniPop = document.getElementById('omni-popover');
+      if (searchIn && omniPop) {
+        searchIn.addEventListener('focus', function () { omniPop.classList.remove('hidden'); });
+        document.addEventListener('click', function (e) {
+          if (!searchIn.contains(e.target) && !omniPop.contains(e.target)) {
+            omniPop.classList.add('hidden');
+          }
+        });
+      }
+
+      var badge = document.getElementById('home-cart-badge');
+      var count = 0;
+      document.querySelectorAll('.home-add-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          count += 1;
+          if (badge) badge.textContent = String(count);
+          var orig = btn.textContent;
+          btn.textContent = 'Ditambahkan ✓';
+          setTimeout(function () { btn.textContent = orig; }, 1200);
+        });
+      });
+    })();
+  </script>
+
+
+
+</body></html>

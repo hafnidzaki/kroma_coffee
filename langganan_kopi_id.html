@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Langganan Kopi Segar — KROMA COFFEE ROASTERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Raleway:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-caramel': '#C67C4E',
+        'espresso-charcoal': '#1C140F',
+        'oat-canvas': '#FBF9F8',
+        'accent': '#C67C4E',
+        'success': '#2D6A4F',
+        'warning': '#B45309',
+        'light-primary': '#8A4C22',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#A86338',
+        'light-on-primary-container': '#FFFBFF',
+        'light-secondary': '#795743',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#FFD0B7',
+        'light-on-secondary-container': '#462A19',
+        'light-tertiary': '#00666D',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#168189',
+        'light-on-tertiary-container': '#F5FEFF',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FBF9F8',
+        'light-on-background': '#1C140F',
+        'light-surface': '#FBF9F8',
+        'light-surface-dim': '#E5D7D1',
+        'light-surface-bright': '#FFFFFF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F6F1EE',
+        'light-surface-container': '#EFE8E4',
+        'light-surface-container-high': '#E8DFDA',
+        'light-surface-container-highest': '#E0D5CF',
+        'light-on-surface': '#1C140F',
+        'light-surface-variant': '#F5DED2',
+        'light-on-surface-variant': '#53443B',
+        'light-outline': '#86736A',
+        'light-outline-variant': '#D8C2B7',
+        'light-inverse-surface': '#1C140F',
+        'light-inverse-on-surface': '#FBF9F8',
+        'light-inverse-primary': '#FFB68C',
+        'dark-primary': '#FFB68C',
+        'dark-on-primary': '#522300',
+        'dark-primary-container': '#C97F50',
+        'dark-on-primary-container': '#441B00',
+        'dark-secondary': '#EABDA4',
+        'dark-on-secondary': '#462A19',
+        'dark-secondary-container': '#61422F',
+        'dark-on-secondary-container': '#DBAF97',
+        'dark-tertiary': '#7BD4DD',
+        'dark-on-tertiary': '#00363A',
+        'dark-tertiary-container': '#409EA6',
+        'dark-on-tertiary-container': '#002C30',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#18120F',
+        'dark-on-background': '#EEE0D9',
+        'dark-surface': '#18120F',
+        'dark-surface-dim': '#18120F',
+        'dark-surface-bright': '#403733',
+        'dark-surface-container-lowest': '#130D0A',
+        'dark-surface-container-low': '#211A17',
+        'dark-surface-container': '#251E1A',
+        'dark-surface-container-high': '#302824',
+        'dark-surface-container-highest': '#3B332F',
+        'dark-on-surface': '#EEE0D9',
+        'dark-surface-variant': '#53443B',
+        'dark-on-surface-variant': '#D8C2B7',
+        'dark-outline': '#A08D83',
+        'dark-outline-variant': '#53443B',
+        'dark-inverse-surface': '#EEE0D9',
+        'dark-inverse-on-surface': '#1C140F',
+        'dark-inverse-primary': '#8D4E24',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'section-lg': '64px',
+        'page-margin': '48px',
+      },
+      fontFamily: {
+        'display': ['"Bodoni Moda"', 'sans-serif'],
+        'headline': ['"Bodoni Moda"', 'sans-serif'],
+        'title': ['"Raleway"', 'sans-serif'],
+        'body': ['"Raleway"', 'sans-serif'],
+        'label': ['"Raleway"', 'sans-serif'],
+        'mono': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-1px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md': ['44px', { lineHeight: '50px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '600' }],
+        'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '0px', fontWeight: '500' }],
+        'headline-sm': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '600' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '250ms',
+        'surface-exit': '180ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <style>
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased selection:bg-warm-caramel selection:text-espresso-charcoal">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-gutter-md flex items-center justify-between gap-gutter-lg">
+        <a href="kroma_homepage_id.html" class="flex items-center gap-gutter-sm shrink-0">
+          <span class="w-8 h-8 rounded bg-espresso-charcoal text-oat-canvas inline-flex items-center justify-center font-display text-title-md">K</span>
+          <span class="font-display text-title-lg tracking-tight text-espresso-charcoal" data-design-text-token="title-lg">KROMA COFFEE ROASTERS</span>
+        </a>
+
+        <nav aria-label="Navigasi utama" class="hidden md:flex items-center gap-gutter-lg">
+          <a href="kroma_homepage_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Beranda</a>
+          <a href="katalog_filter_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Katalog</a>
+          <a href="resep_seduh_majalah_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Resep Seduh</a>
+          <a href="lokasi_experience_store_id.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">Lokasi Toko</a>
+        </nav>
+
+        <div class="flex items-center gap-gutter-sm shrink-0">
+          <a href="wishlist_favorit_id.html" aria-label="Wishlist" class="inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
+          </a>
+          <a href="keranjang_pengiriman_id.html" aria-label="Keranjang Belanja" class="relative inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
+            <span class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm inline-flex items-center justify-center tabular-nums">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-section flex flex-col gap-gutter-xl">
+
+        <!-- Hero Intro -->
+        <div class="flex flex-col gap-gutter-xs max-w-3xl pb-gutter-lg border-b border-light-outline-variant">
+          <span class="self-start px-gutter-md py-1 rounded-full bg-light-surface-variant border border-warm-caramel font-mono text-mono-sm text-espresso-charcoal uppercase tracking-wider">ROAST SUBSCRIPTION · HEMAT 15%</span>
+          <h1 class="font-display text-display-md text-espresso-charcoal text-balance" data-design-text-token="display-md">Langganan Kopi Segar Sesuai Jadwal Seduh Anda</h1>
+          <p class="font-body text-body-lg text-light-on-surface-variant text-pretty" data-design-text-token="body-lg">
+            Disangrai setiap Senin &amp; Kamis dan dikirim otomatis dengan gratis ongkir. Bebas jeda atau ubah jadwal kapan saja.
+          </p>
+        </div>
+
+        <!-- 2-Column Configurator -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+
+          <!-- Left Column: Steps 1-3 -->
+          <div class="lg:col-span-7 flex flex-col gap-gutter-lg">
+
+            <!-- Step 1: Profile -->
+            <section class="bg-light-surface-container-lowest border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">1. Pilih Profil Kopi</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter-md items-stretch">
+                <button type="button" data-plan="Filter Explorer" class="plan-btn text-left p-gutter-md rounded-md border-2 border-warm-caramel bg-light-surface-container-low flex flex-col gap-gutter-xs h-full transition-colors">
+                  <span class="font-mono text-mono-sm text-light-primary">SINGLE ORIGIN</span>
+                  <span class="font-title text-title-md text-espresso-charcoal">Filter Explorer</span>
+                  <span class="font-body text-body-sm text-light-on-surface-variant">Mandheling, Gayo &amp; Ethiopia light-medium roast.</span>
+                </button>
+                <button type="button" data-plan="Espresso Daily" class="plan-btn text-left p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal flex flex-col gap-gutter-xs h-full transition-colors">
+                  <span class="font-mono text-mono-sm text-light-on-surface-variant">HOUSE BLEND</span>
+                  <span class="font-title text-title-md text-espresso-charcoal">Espresso Daily</span>
+                  <span class="font-body text-body-sm text-light-on-surface-variant">Karamel &amp; cokelat pekat untuk espresso dan susu.</span>
+                </button>
+                <button type="button" data-plan="Roaster&#39;s Choice" class="plan-btn text-left p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal flex flex-col gap-gutter-xs h-full transition-colors">
+                  <span class="font-mono text-mono-sm text-light-on-surface-variant">MICRO-LOT</span>
+                  <span class="font-title text-title-md text-espresso-charcoal">Roaster&#39;s Choice</span>
+                  <span class="font-body text-body-sm text-light-on-surface-variant">Panen terbatas kurasi Head Roaster tiap bulan.</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- Step 2: Size & Grind -->
+            <section class="bg-light-surface-container-lowest border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">2. Ukuran Kemasan &amp; Gilingan</h2>
+
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-espresso-charcoal">Ukuran Kemasan</span>
+                <div class="flex flex-wrap gap-gutter-sm">
+                  <button type="button" data-weight="200g" data-price="85000" class="weight-btn px-gutter-md py-2 rounded border-2 border-warm-caramel bg-light-surface-container-low font-mono text-mono-sm text-espresso-charcoal tabular-nums transition-colors">200g — Rp 85.000</button>
+                  <button type="button" data-weight="500g" data-price="195000" class="weight-btn px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal font-mono text-mono-sm text-espresso-charcoal tabular-nums transition-colors">500g — Rp 195.000</button>
+                  <button type="button" data-weight="1kg" data-price="365000" class="weight-btn px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal font-mono text-mono-sm text-espresso-charcoal tabular-nums transition-colors">1kg — Rp 365.000</button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-gutter-xs pt-gutter-xs">
+                <span class="font-label text-label-md text-espresso-charcoal">Tingkat Gilingan</span>
+                <div class="flex flex-wrap gap-gutter-sm">
+                  <button type="button" data-grind="Biji Utuh" class="grind-btn px-gutter-md py-2 rounded border-2 border-warm-caramel bg-light-surface-container-low font-label text-label-md text-espresso-charcoal transition-colors">Biji Utuh</button>
+                  <button type="button" data-grind="Medium (V60)" class="grind-btn px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal transition-colors">Medium (V60)</button>
+                  <button type="button" data-grind="Halus (Espresso)" class="grind-btn px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal transition-colors">Halus (Espresso)</button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Step 3: Frequency -->
+            <section class="bg-light-surface-container-lowest border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">3. Frekuensi Pengiriman</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+                <button type="button" data-freq="Setiap 2 Minggu" class="freq-btn text-left p-gutter-md rounded-md border-2 border-warm-caramel bg-light-surface-container-low flex flex-col gap-gutter-xs transition-colors">
+                  <span class="font-title text-title-md text-espresso-charcoal">Setiap 2 Minggu</span>
+                  <span class="font-body text-body-sm text-light-on-surface-variant">Ideal untuk 1–2 cangkir setiap hari.</span>
+                </button>
+                <button type="button" data-freq="Setiap 1 Bulan" class="freq-btn text-left p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal flex flex-col gap-gutter-xs transition-colors">
+                  <span class="font-title text-title-md text-espresso-charcoal">Setiap 1 Bulan</span>
+                  <span class="font-body text-body-sm text-light-on-surface-variant">Cocok untuk penikmat kopi akhir pekan.</span>
+                </button>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- Right Column: Sticky Summary -->
+          <aside class="lg:col-span-5 sticky top-28 bg-light-surface-container-low border border-light-outline-variant rounded-lg p-gutter-xl flex flex-col gap-gutter-lg">
+            <div class="flex items-center gap-gutter-md pb-gutter-md border-b border-light-outline-variant">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDPWvgn0RUj79UlsVOp5H7zM3YZMCnfItkWPF_l11po6l4DQTLzTt5ggG2Fi02_U62xydVHm6kAvFetSt8BGyKfWHe2SzZVvWc1hHaYAqzK1GcpNYJTp6W8oYUoToqbfgR5FN_WlmJrlmHKIeVGfsXqDA4neqtH48fvS2xcem1qZiZEKNVCBHG8FS0dbOHvvO2ZB6BolRPKwlwD3ggFvv4HG8Uxj6p3WK9Dukz7mxDGrh9V_T26RyIaisY" alt="Paket Langganan Kroma" class="w-16 h-16 rounded object-cover border border-light-outline-variant shrink-0">
+              <div class="flex flex-col">
+                <span class="font-mono text-mono-sm text-light-primary uppercase">RINGKASAN LANGGANAN</span>
+                <h2 id="sub-summary-plan" class="font-headline text-headline-md text-espresso-charcoal">Filter Explorer</h2>
+              </div>
+            </div>
+
+            <dl class="flex flex-col gap-gutter-sm">
+              <div class="flex items-center justify-between">
+                <dt class="font-body text-body-md text-light-on-surface-variant">Ukuran &amp; Gilingan</dt>
+                <dd id="sub-summary-spec" class="font-mono text-mono-md text-espresso-charcoal">200g · Biji Utuh</dd>
+              </div>
+              <div class="flex items-center justify-between">
+                <dt class="font-body text-body-md text-light-on-surface-variant">Frekuensi Kirim</dt>
+                <dd id="sub-summary-freq" class="font-mono text-mono-md text-espresso-charcoal">Setiap 2 Minggu</dd>
+              </div>
+              <div class="flex items-center justify-between">
+                <dt class="font-body text-body-md text-light-on-surface-variant">Ongkos Kirim</dt>
+                <dd class="font-mono text-mono-md text-success">Gratis</dd>
+              </div>
+              <div class="flex items-center justify-between pt-gutter-md border-t border-light-outline-variant">
+                <dt class="font-title text-title-lg text-espresso-charcoal">Tagihan per Kirim</dt>
+                <dd id="sub-summary-price" class="font-mono text-headline-sm text-light-primary tabular-nums">Rp 85.000</dd>
+              </div>
+            </dl>
+
+            <a href="keranjang_pengiriman_id.html" class="w-full inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3.5 rounded bg-warm-caramel text-espresso-charcoal hover:bg-espresso-charcoal hover:text-oat-canvas font-label text-label-lg transition-colors">
+              <span>Mulai Langganan Sekarang</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+
+            <p class="font-body text-body-sm text-light-on-surface-variant text-center">
+              Tanpa kontrak jangka panjang. Batalkan atau jeda kapan saja dari halaman Akun Saya.
+            </p>
+          </aside>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    (function () {
+      let state = {
+        plan: 'Filter Explorer',
+        weight: '200g',
+        grind: 'Biji Utuh',
+        freq: 'Setiap 2 Minggu',
+        price: 85000
+      };
+
+      const elPlan = document.getElementById('sub-summary-plan');
+      const elSpec = document.getElementById('sub-summary-spec');
+      const elFreq = document.getElementById('sub-summary-freq');
+      const elPrice = document.getElementById('sub-summary-price');
+
+      function formatRp(num) {
+        return 'Rp ' + num.toLocaleString('id-ID');
+      }
+
+      function renderSummary() {
+        elPlan.textContent = state.plan;
+        elSpec.textContent = state.weight + ' · ' + state.grind;
+        elFreq.textContent = state.freq;
+        elPrice.textContent = formatRp(state.price);
+      }
+
+      document.querySelectorAll('.plan-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.plan = btn.getAttribute('data-plan');
+          document.querySelectorAll('.plan-btn').forEach(function (b) {
+            b.className = b === btn
+              ? 'plan-btn text-left p-gutter-md rounded-md border-2 border-warm-caramel bg-light-surface-container-low flex flex-col gap-gutter-xs h-full transition-colors'
+              : 'plan-btn text-left p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal flex flex-col gap-gutter-xs h-full transition-colors';
+          });
+          renderSummary();
+        });
+      });
+
+      document.querySelectorAll('.weight-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.weight = btn.getAttribute('data-weight');
+          state.price = Number(btn.getAttribute('data-price'));
+          document.querySelectorAll('.weight-btn').forEach(function (b) {
+            b.className = b === btn
+              ? 'weight-btn px-gutter-md py-2 rounded border-2 border-warm-caramel bg-light-surface-container-low font-mono text-mono-sm text-espresso-charcoal tabular-nums transition-colors'
+              : 'weight-btn px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal font-mono text-mono-sm text-espresso-charcoal tabular-nums transition-colors';
+          });
+          renderSummary();
+        });
+      });
+
+      document.querySelectorAll('.grind-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.grind = btn.getAttribute('data-grind');
+          document.querySelectorAll('.grind-btn').forEach(function (b) {
+            b.className = b === btn
+              ? 'grind-btn px-gutter-md py-2 rounded border-2 border-warm-caramel bg-light-surface-container-low font-label text-label-md text-espresso-charcoal transition-colors'
+              : 'grind-btn px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal transition-colors';
+          });
+          renderSummary();
+        });
+      });
+
+      document.querySelectorAll('.freq-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.freq = btn.getAttribute('data-freq');
+          document.querySelectorAll('.freq-btn').forEach(function (b) {
+            b.className = b === btn
+              ? 'freq-btn text-left p-gutter-md rounded-md border-2 border-warm-caramel bg-light-surface-container-low flex flex-col gap-gutter-xs transition-colors'
+              : 'freq-btn text-left p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-lowest hover:border-espresso-charcoal flex flex-col gap-gutter-xs transition-colors';
+          });
+          renderSummary();
+        });
+      });
+    })();
+  </script>
+
+
+
+</body></html>

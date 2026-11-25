@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lacak Status Pengiriman — KROMA COFFEE ROASTERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Raleway:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'warm-caramel': '#C67C4E',
+        'espresso-charcoal': '#1C140F',
+        'oat-canvas': '#FBF9F8',
+        'accent': '#C67C4E',
+        'success': '#2D6A4F',
+        'warning': '#B45309',
+        'light-primary': '#8A4C22',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#A86338',
+        'light-on-primary-container': '#FFFBFF',
+        'light-secondary': '#795743',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#FFD0B7',
+        'light-on-secondary-container': '#462A19',
+        'light-tertiary': '#00666D',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#168189',
+        'light-on-tertiary-container': '#F5FEFF',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FBF9F8',
+        'light-on-background': '#1C140F',
+        'light-surface': '#FBF9F8',
+        'light-surface-dim': '#E5D7D1',
+        'light-surface-bright': '#FFFFFF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F6F1EE',
+        'light-surface-container': '#EFE8E4',
+        'light-surface-container-high': '#E8DFDA',
+        'light-surface-container-highest': '#E0D5CF',
+        'light-on-surface': '#1C140F',
+        'light-surface-variant': '#F5DED2',
+        'light-on-surface-variant': '#53443B',
+        'light-outline': '#86736A',
+        'light-outline-variant': '#D8C2B7',
+        'light-inverse-surface': '#1C140F',
+        'light-inverse-on-surface': '#FBF9F8',
+        'light-inverse-primary': '#FFB68C',
+        'dark-primary': '#FFB68C',
+        'dark-on-primary': '#522300',
+        'dark-primary-container': '#C97F50',
+        'dark-on-primary-container': '#441B00',
+        'dark-secondary': '#EABDA4',
+        'dark-on-secondary': '#462A19',
+        'dark-secondary-container': '#61422F',
+        'dark-on-secondary-container': '#DBAF97',
+        'dark-tertiary': '#7BD4DD',
+        'dark-on-tertiary': '#00363A',
+        'dark-tertiary-container': '#409EA6',
+        'dark-on-tertiary-container': '#002C30',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#18120F',
+        'dark-on-background': '#EEE0D9',
+        'dark-surface': '#18120F',
+        'dark-surface-dim': '#18120F',
+        'dark-surface-bright': '#403733',
+        'dark-surface-container-lowest': '#130D0A',
+        'dark-surface-container-low': '#211A17',
+        'dark-surface-container': '#251E1A',
+        'dark-surface-container-high': '#302824',
+        'dark-surface-container-highest': '#3B332F',
+        'dark-on-surface': '#EEE0D9',
+        'dark-surface-variant': '#53443B',
+        'dark-on-surface-variant': '#D8C2B7',
+        'dark-outline': '#A08D83',
+        'dark-outline-variant': '#53443B',
+        'dark-inverse-surface': '#EEE0D9',
+        'dark-inverse-on-surface': '#1C140F',
+        'dark-inverse-primary': '#8D4E24',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'section-lg': '64px',
+        'page-margin': '48px',
+      },
+      fontFamily: {
+        'display': ['"Bodoni Moda"', 'sans-serif'],
+        'headline': ['"Bodoni Moda"', 'sans-serif'],
+        'title': ['"Raleway"', 'sans-serif'],
+        'body': ['"Raleway"', 'sans-serif'],
+        'label': ['"Raleway"', 'sans-serif'],
+        'mono': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-1px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md': ['44px', { lineHeight: '50px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0px', fontWeight: '600' }],
+        'headline-md': ['28px', { lineHeight: '36px', letterSpacing: '0px', fontWeight: '500' }],
+        'headline-sm': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0.1px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '600' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '250ms',
+        'surface-exit': '180ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <style>
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased selection:bg-warm-caramel selection:text-espresso-charcoal">
+  <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Contextual Header -->
+    <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-gutter-md flex items-center justify-between gap-gutter-lg">
+        <div class="flex items-center gap-gutter-md">
+          <a href="kroma_homepage_id.html" class="flex items-center gap-gutter-sm shrink-0">
+            <span class="w-8 h-8 rounded bg-espresso-charcoal text-oat-canvas inline-flex items-center justify-center font-display text-title-md">K</span>
+            <span class="font-display text-title-lg tracking-tight text-espresso-charcoal" data-design-text-token="title-lg">KROMA COFFEE ROASTERS</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-gutter-md">
+          <a href="konfirmasi_pesanan_id.html" class="inline-flex items-center gap-gutter-xs font-label text-label-md text-light-on-surface-variant hover:text-espresso-charcoal transition-colors">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_back</span>
+            <span data-design-text-token="label-md">Detail Pesanan</span>
+          </a>
+          <a href="kroma_homepage_id.html" class="px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+            <span data-design-text-token="label-md">Beranda</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <div class="max-w-[1320px] mx-auto px-page-margin py-section flex flex-col gap-gutter-xl">
+
+        <!-- Breadcrumbs & Title -->
+        <div class="flex flex-col gap-gutter-xs">
+          <nav aria-label="Breadcrumb" class="flex items-center gap-gutter-xs font-mono text-mono-sm text-light-on-surface-variant">
+            <a href="kroma_homepage_id.html" class="hover:text-espresso-charcoal">Beranda</a>
+            <span>/</span>
+            <a href="konfirmasi_pesanan_id.html" class="hover:text-espresso-charcoal">Pesanan #KROMA-20261125-8849</a>
+            <span>/</span>
+            <span class="text-espresso-charcoal">Live Tracking</span>
+          </nav>
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md">
+            <h1 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Lacak Status Pengiriman</h1>
+            <button id="refresh-tracking-btn" type="button" class="self-start md:self-auto inline-flex items-center gap-gutter-xs px-gutter-md py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">refresh</span>
+              <span data-design-text-token="label-md">Segarkan Status</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Top Tracking Summary Card -->
+        <section class="bg-light-surface-container-lowest border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-lg">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-gutter-md pb-gutter-md border-b border-light-outline-variant">
+            <div class="flex flex-wrap items-center gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-on-surface-variant" data-design-text-token="mono-sm">NOMOR RESI SICEPAT BEST</span>
+                <div class="flex items-center gap-gutter-sm">
+                  <span id="awb-number" class="font-mono text-headline-sm text-espresso-charcoal tabular-nums" data-design-text-token="headline-sm">SCP-8849-2026-JKT</span>
+                  <button id="copy-awb-btn" type="button" class="px-gutter-sm py-1 rounded border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-mono text-mono-sm text-espresso-charcoal transition-colors">
+                    SALIN RESI
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-gutter-md">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-mono text-mono-sm text-light-on-surface-variant" data-design-text-token="mono-sm">ESTIMASI TIBA</span>
+                <span class="font-title text-title-md text-espresso-charcoal tabular-nums" data-design-text-token="title-md">27–28 Nov 2026</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-gutter-md py-1.5 rounded-full bg-light-surface-variant border border-warm-caramel font-label text-label-md text-espresso-charcoal">
+                <span class="material-symbols-outlined text-title-md text-light-primary" aria-hidden="true">local_shipping</span>
+                <span data-design-text-token="label-md">Sedang Dalam Pengiriman</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 4-Step Milestone Progress -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md items-stretch">
+            <div class="p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-low flex items-start gap-gutter-sm">
+              <span class="w-8 h-8 rounded-full bg-success text-light-on-primary inline-flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">check</span>
+              </span>
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Pesanan Dibayar</span>
+                <span class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">25 Nov, 20:55 WIB</span>
+              </div>
+            </div>
+
+            <div class="p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-low flex items-start gap-gutter-sm">
+              <span class="w-8 h-8 rounded-full bg-success text-light-on-primary inline-flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">check</span>
+              </span>
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Disangrai &amp; Dikemas</span>
+                <span class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">26 Nov, 09:15 WIB</span>
+              </div>
+            </div>
+
+            <div class="p-gutter-md rounded-md border-2 border-warm-caramel bg-light-surface-variant/40 flex items-start gap-gutter-sm">
+              <span class="w-8 h-8 rounded-full bg-espresso-charcoal text-oat-canvas inline-flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">local_shipping</span>
+              </span>
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Dalam Pengiriman</span>
+                <span class="font-mono text-mono-sm text-light-primary tabular-nums" data-design-text-token="mono-sm">26 Nov, 14:30 WIB</span>
+              </div>
+            </div>
+
+            <div class="p-gutter-md rounded-md border border-light-outline-variant bg-light-surface-container-lowest flex items-start gap-gutter-sm">
+              <span class="w-8 h-8 rounded-full bg-light-surface-container text-light-on-surface-variant inline-flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">home</span>
+              </span>
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-title text-title-md text-light-on-surface-variant" data-design-text-token="title-md">Pesanan Tiba</span>
+                <span class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">Estimasi 27–28 Nov</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main 2-Column Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+
+          <!-- Left Column: Timeline Log -->
+          <section class="lg:col-span-7 bg-light-surface-container-lowest border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-lg">
+            <div class="flex items-center justify-between gap-gutter-md pb-gutter-sm border-b border-light-outline-variant">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">Riwayat Perjalanan Paket</h2>
+              <span id="last-sync-text" class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">Diperbarui: 26 Nov, 14:32 WIB</span>
+            </div>
+
+            <ol class="flex flex-col gap-gutter-lg">
+              <li class="flex items-start gap-gutter-md">
+                <span class="w-3.5 h-3.5 mt-1.5 rounded-full bg-warm-caramel ring-4 ring-light-surface-variant shrink-0"></span>
+                <div class="flex-1 flex flex-col gap-gutter-xs pb-gutter-md border-b border-light-outline-variant">
+                  <div class="flex flex-wrap items-baseline justify-between gap-gutter-sm">
+                    <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Paket tiba di Hub Sortir Kebayoran Baru</span>
+                    <span class="font-mono text-mono-sm text-light-primary tabular-nums" data-design-text-token="mono-sm">26 Nov 2026, 14:30 WIB</span>
+                  </div>
+                  <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                    Paket sedang dijadwalkan untuk pengantaran ke alamat tujuan oleh kurir SiCepat BEST.
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-gutter-md">
+                <span class="w-3.5 h-3.5 mt-1.5 rounded-full bg-espresso-charcoal shrink-0"></span>
+                <div class="flex-1 flex flex-col gap-gutter-xs pb-gutter-md border-b border-light-outline-variant">
+                  <div class="flex flex-wrap items-baseline justify-between gap-gutter-sm">
+                    <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Diserahkan ke kurir SiCepat BEST</span>
+                    <span class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">26 Nov 2026, 11:20 WIB</span>
+                  </div>
+                  <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                    Kurir telah menjemput paket dari Kroma Roastery Hub Senopati, Jakarta Selatan.
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-gutter-md">
+                <span class="w-3.5 h-3.5 mt-1.5 rounded-full bg-espresso-charcoal shrink-0"></span>
+                <div class="flex-1 flex flex-col gap-gutter-xs pb-gutter-md border-b border-light-outline-variant">
+                  <div class="flex flex-wrap items-baseline justify-between gap-gutter-sm">
+                    <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Selesai disangrai &amp; dikemas (Fresh Roast)</span>
+                    <span class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">26 Nov 2026, 09:15 WIB</span>
+                  </div>
+                  <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                    Batch #2611-MDH Mandheling Arabica dikemas dengan katup satu arah (one-way degassing valve).
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-gutter-md">
+                <span class="w-3.5 h-3.5 mt-1.5 rounded-full bg-success shrink-0"></span>
+                <div class="flex-1 flex flex-col gap-gutter-xs">
+                  <div class="flex flex-wrap items-baseline justify-between gap-gutter-sm">
+                    <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Pembayaran terverifikasi (BCA Virtual Account)</span>
+                    <span class="font-mono text-mono-sm text-light-on-surface-variant tabular-nums" data-design-text-token="mono-sm">25 Nov 2026, 20:55 WIB</span>
+                  </div>
+                  <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                    Pesanan #KROMA-20261125-8849 diteruskan ke tim roastery untuk jadwal sangrai pagi.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Right Column: Address, Package Contents & Actions -->
+          <aside class="lg:col-span-5 flex flex-col gap-gutter-lg">
+            <section class="bg-light-surface-container-low border border-light-outline-variant rounded-lg p-gutter-lg flex flex-col gap-gutter-md">
+              <h2 class="font-headline text-headline-md text-espresso-charcoal" data-design-text-token="headline-md">Tujuan &amp; Isi Paket</h2>
+
+              <div class="flex flex-col gap-gutter-xs pb-gutter-md border-b border-light-outline-variant">
+                <span class="font-mono text-mono-sm text-light-on-surface-variant uppercase" data-design-text-token="mono-sm">PENERIMA</span>
+                <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Raka Pratama · 0812-8849-2026</span>
+                <p class="font-body text-body-md text-light-on-surface-variant text-pretty" data-design-text-token="body-md">
+                  Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan 12190
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-gutter-sm">
+                <span class="font-mono text-mono-sm text-light-on-surface-variant uppercase" data-design-text-token="mono-sm">ITEM PESANAN (#KROMA-20261125-8849)</span>
+                <div class="flex items-baseline justify-between gap-gutter-sm">
+                  <span class="font-body text-body-md text-espresso-charcoal" data-design-text-token="body-md">Mandheling Arabica 200g × 2</span>
+                  <span class="font-mono text-mono-md text-espresso-charcoal tabular-nums" data-design-text-token="mono-md">Rp 190.000</span>
+                </div>
+                <div class="flex items-baseline justify-between gap-gutter-sm">
+                  <span class="font-body text-body-md text-espresso-charcoal" data-design-text-token="body-md">Hario V60 02 Ceramic × 1</span>
+                  <span class="font-mono text-mono-md text-espresso-charcoal tabular-nums" data-design-text-token="mono-md">Rp 215.000</span>
+                </div>
+                <div class="flex items-baseline justify-between gap-gutter-sm pt-gutter-sm border-t border-light-outline-variant">
+                  <span class="font-title text-title-md text-espresso-charcoal" data-design-text-token="title-md">Total Dibayar (LUNAS)</span>
+                  <span class="font-mono text-title-lg text-light-primary tabular-nums" data-design-text-token="title-lg">Rp 405.000</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Roaster Freshness Note -->
+            <div class="bg-light-surface-variant border border-warm-caramel rounded-lg p-gutter-md flex items-start gap-gutter-md">
+              <span class="w-9 h-9 rounded-full bg-espresso-charcoal text-warm-caramel inline-flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">coffee</span>
+              </span>
+              <p class="font-body text-body-sm text-espresso-charcoal text-pretty" data-design-text-token="body-sm">
+                <strong>Catatan Kesegaran:</strong> Biji kopi disangrai 26 Nov 2026. Untuk hasil seduhan terbaik, diamkan (resting) hingga 29 Nov 2026 sebelum diseduh.
+              </p>
+            </div>
+
+            <a href="kroma_homepage_id.html" class="w-full inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3.5 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-lg transition-colors">
+              <span data-design-text-token="label-lg">Kembali Belanja Kopi</span>
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+            </a>
+          </aside>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    (function () {
+      const copyBtn = document.getElementById('copy-awb-btn');
+      const awbText = document.getElementById('awb-number').textContent.trim();
+      const refreshBtn = document.getElementById('refresh-tracking-btn');
+      const lastSyncText = document.getElementById('last-sync-text');
+
+      copyBtn.addEventListener('click', function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(awbText).catch(function () {});
+        }
+        copyBtn.textContent = 'TERSALIN';
+        setTimeout(function () {
+          copyBtn.textContent = 'SALIN RESI';
+        }, 1800);
+      });
+
+      refreshBtn.addEventListener('click', function () {
+        const now = new Date();
+        const hh = String(now.getHours()).padStart(2, '0');
+        const mm = String(now.getMinutes()).padStart(2, '0');
+        lastSyncText.textContent = 'Diperbarui: Baru saja (' + hh + ':' + mm + ' WIB)';
+      });
+    })();
+  </script>
+
+
+
+</body></html>

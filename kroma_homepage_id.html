@@ -100,9 +100,9 @@ globalThis.tailwind.config = {
         'gutter-md': '16px',
         'gutter-lg': '24px',
         'gutter-xl': '32px',
-        'section': '48px',
-        'section-lg': '64px',
-        'page-margin': '48px',
+        'section': 'var(--section-py)',
+        'section-lg': 'calc(var(--section-py) * 1.33)',
+        'page-margin': 'var(--page-margin)',
       },
       fontFamily: {
         'display': ['"Bodoni Moda"', 'sans-serif'],
@@ -153,172 +153,249 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
 </script>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&amp;family=Raleway:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
-  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+  
+  <style>
+    :root {
+      --page-margin: 16px;
+      --section-py: 28px;
+    }
+    @media (min-width: 640px) {
+      :root {
+        --page-margin: 24px;
+        --section-py: 36px;
+      }
+    }
+    @media (min-width: 1024px) {
+      :root {
+        --page-margin: 48px;
+        --section-py: 48px;
+      }
+    }
+    /* Hide scrollbars for smooth horizontal swipe reels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Safe bottom for iOS home bar */
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { 
+      display: inline-block; 
+      width: 1em; 
+      height: 1em; 
+      line-height: 1 !important; 
+      box-sizing: content-box; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      direction: ltr; 
+      vertical-align: middle; 
+    }
+  </style>
 </head>
-<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased">
+<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased pb-16 md:pb-0 overflow-x-hidden">
   <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
 
-    <!-- 1. TOP TRUST BAR -->
-    <div class="bg-espresso-charcoal text-oat-canvas py-gutter-sm px-page-margin border-b border-dark-outline-variant">
-      <div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-gutter-md">
-        <div class="flex flex-wrap items-center gap-gutter-lg">
-          <span class="inline-flex items-center gap-gutter-xs font-body text-body-sm text-oat-canvas">
-            <span class="material-symbols-outlined text-body-md text-warm-caramel" aria-hidden="true">verified_user</span>
-            <span>Garansi Mesin 2 Tahun</span>
+    <!-- 1. TOP TRUST BAR (RESPONSIVE) -->
+    <div class="bg-espresso-charcoal text-oat-canvas py-1.5 md:py-gutter-sm px-3 md:px-page-margin border-b border-dark-outline-variant text-xs">
+      <div class="max-w-[1320px] mx-auto flex items-center justify-between">
+        <!-- Mobile & Desktop Single Ticker -->
+        <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap text-[11px] md:text-xs">
+          <span class="inline-flex items-center gap-1 text-warm-caramel font-medium shrink-0">
+            <span class="material-symbols-outlined text-[15px]" aria-hidden="true">verified_user</span>
+            <span>Garansi Mesin 2 Thn</span>
           </span>
-          <span class="text-dark-outline">|</span>
-          <span class="inline-flex items-center gap-gutter-xs font-body text-body-sm text-oat-canvas">
-            <span class="material-symbols-outlined text-body-md text-warm-caramel" aria-hidden="true">local_shipping</span>
-            <span>Gratis Ongkir se-Indonesia*</span>
+          <span class="text-dark-outline shrink-0">·</span>
+          <span class="inline-flex items-center gap-1 text-oat-canvas shrink-0">
+            <span class="material-symbols-outlined text-[15px] text-warm-caramel" aria-hidden="true">local_shipping</span>
+            <span>Gratis Ongkir se-Indonesia</span>
           </span>
-          <span class="text-dark-outline">|</span>
-          <span class="inline-flex items-center gap-gutter-xs font-body text-body-sm text-oat-canvas">
-            <span class="material-symbols-outlined text-body-md text-warm-caramel" aria-hidden="true">workspace_premium</span>
+          <span class="hidden lg:inline text-dark-outline">|</span>
+          <span class="hidden lg:inline-flex items-center gap-1 text-oat-canvas">
+            <span class="material-symbols-outlined text-[15px] text-warm-caramel" aria-hidden="true">workspace_premium</span>
             <span>Produk 100% Original &amp; Bersertifikat</span>
           </span>
         </div>
-        <div class="flex items-center gap-gutter-md">
-          <a href="#footer-kroma" class="inline-flex items-center gap-gutter-xs font-label text-label-md text-oat-canvas hover:text-warm-caramel transition-colors">
-            <span class="material-symbols-outlined text-body-md" aria-hidden="true">smartphone</span>
-            <span>Download Kroma App</span>
+        <div class="hidden sm:flex items-center gap-3 text-[11px] md:text-xs shrink-0">
+          <a href="#footer-kroma" class="inline-flex items-center gap-1 text-oat-canvas hover:text-warm-caramel transition-colors">
+            <span class="material-symbols-outlined text-xs" aria-hidden="true">smartphone</span>
+            <span>Download App</span>
           </a>
           <span class="text-dark-outline">|</span>
-          <a href="#footer-kroma" aria-label="WhatsApp Kroma Concierge" class="inline-flex items-center gap-gutter-xs font-label text-label-md text-warm-caramel hover:text-oat-canvas transition-colors">
-            <span class="material-symbols-outlined text-body-md" aria-hidden="true">chat</span>
-            <span>WhatsApp</span>
+          <a href="#footer-kroma" class="inline-flex items-center gap-1 text-warm-caramel hover:text-oat-canvas transition-colors">
+            <span class="material-symbols-outlined text-xs" aria-hidden="true">chat</span>
+            <span>WhatsApp Barista</span>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- 2. MAIN NAVBAR & OMNI SEARCH -->
-    <header class="sticky top-0 z-40 bg-oat-canvas border-b border-light-outline-variant">
-      <div class="max-w-[1320px] mx-auto px-4 py-3 flex items-center justify-between gap-2 md:gap-4 ">
-        <!-- Brand Logo -->
-        <a href="kroma_homepage_id.html" class="flex items-center gap-gutter-sm shrink-0">
-          <span class="w-3 h-3 rounded-full bg-warm-caramel" aria-hidden="true"></span>
-          <span class="font-display text-title-lg text-espresso-charcoal tracking-tight whitespace-nowrap" data-design-text-token="title-lg">KROMA COFFEE ROASTERS</span>
-        </a>
+    <!-- 2. MAIN NAVBAR & OMNI SEARCH (MOBILE-FIRST RESPONSIVE) -->
+    <header class="sticky top-0 z-40 bg-oat-canvas/95 backdrop-blur-sm border-b border-light-outline-variant shadow-sm">
+      <div class="max-w-[1320px] mx-auto px-3 sm:px-4 py-2 sm:py-3 flex flex-col gap-2">
+        <!-- Row 1: Brand, Kategori, Desktop Search, Icons -->
+        <div class="flex items-center justify-between gap-2 md:gap-4">
+          <!-- Brand Logo -->
+          <a href="kroma_homepage_id.html" class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-warm-caramel" aria-hidden="true"></span>
+            <span class="font-display text-base sm:text-title-lg text-espresso-charcoal tracking-tight font-bold whitespace-nowrap">KROMA COFFEE</span>
+          </a>
 
-        <!-- Kategori Button (4-square grid icon) -->
-        <div class="relative shrink-0">
-          <button id="kategori-mega-btn" type="button" onclick="window.toggleKromaKategori(event)" class="inline-flex items-center gap-2 px-3.5 h-10 rounded-lg border border-amber-900/20 bg-stone-50 hover:bg-amber-50 hover:border-amber-800 text-stone-900 font-medium text-sm transition-all cursor-pointer select-none shadow-sm active:scale-95">
-            <span class="material-symbols-outlined text-[20px] text-amber-800" aria-hidden="true">grid_view</span>
-            <span class="font-semibold">Kategori</span>
-            <span id="kategori-chevron" class="material-symbols-outlined text-[18px] text-stone-400 transition-transform duration-200">expand_more</span>
-          </button>
+          <!-- Kategori Button (Mega Menu Dropdown) -->
+          <div class="relative shrink-0">
+            <button id="kategori-mega-btn" type="button" onclick="window.toggleKromaKategori(event)" class="inline-flex items-center gap-1 sm:gap-2 px-2.5 sm:px-3.5 h-9 sm:h-10 rounded-lg border border-amber-900/20 bg-stone-50 hover:bg-amber-50 hover:border-amber-800 text-stone-900 font-medium text-xs sm:text-sm transition-all cursor-pointer select-none shadow-sm active:scale-95">
+              <span class="material-symbols-outlined text-[18px] sm:text-[20px] text-amber-800" aria-hidden="true">grid_view</span>
+              <span class="font-semibold hidden xs:inline">Kategori</span>
+              <span id="kategori-chevron" class="material-symbols-outlined text-xs sm:text-sm text-stone-400 transition-transform duration-200">expand_more</span>
+            </button>
 
-          <!-- Mega Menu Popover -->
-          <div id="kategori-mega-menu" style="display: none; z-index: 99999;" class="absolute left-0 top-full mt-2 w-80 bg-white border border-stone-200 shadow-2xl rounded-2xl p-2 transition-all">
-            <div class="px-3 py-2 border-b border-stone-100 mb-1 flex items-center justify-between">
-              <span class="text-[11px] font-mono uppercase tracking-wider text-stone-400 font-bold">Kategori Produk & Panduan</span>
-              <span class="text-[10px] text-amber-800 font-medium bg-amber-50 px-2 py-0.5 rounded-full">Kroma Coffee</span>
+            <!-- Mega Menu Popover -->
+            <div id="kategori-mega-menu" style="display: none; z-index: 99999;" class="absolute left-0 top-full mt-2 w-[calc(100vw-24px)] max-w-xs sm:w-80 bg-white border border-stone-200 shadow-2xl rounded-2xl p-2 transition-all">
+              <div class="px-3 py-2 border-b border-stone-100 mb-1 flex items-center justify-between">
+                <span class="text-[11px] font-mono uppercase tracking-wider text-stone-400 font-bold">Kategori Produk &amp; Panduan</span>
+                <span class="text-[10px] text-amber-800 font-medium bg-amber-50 px-2 py-0.5 rounded-full">Kroma Coffee</span>
+              </div>
+              
+              <a href="katalog_filter_id.html" class="flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                  <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-sm sm:text-base">☕</span>
+                  <div>
+                    <div class="font-semibold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900">Biji Kopi Specialty</div>
+                    <div class="text-[10px] sm:text-[11px] text-stone-500 font-normal">Single Origin &amp; House Blend</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-xs sm:text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+              </a>
+
+              <a href="paket_bundling_id.html" class="flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                  <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-sm sm:text-base">🎁</span>
+                  <div>
+                    <div class="font-semibold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900">Paket Bundling &amp; Kafe</div>
+                    <div class="text-[10px] sm:text-[11px] text-stone-500 font-normal">Home Barista &amp; Paket Usaha</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-xs sm:text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+              </a>
+
+              <a href="katalog_filter_id.html" class="flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                  <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-sm sm:text-base">⚙️</span>
+                  <div>
+                    <div class="font-semibold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900">Mesin Espresso &amp; Grinder</div>
+                    <div class="text-[10px] sm:text-[11px] text-stone-500 font-normal">Komersial, Manual &amp; Electric</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-xs sm:text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+              </a>
+
+              <a href="resep_seduh_majalah_id.html" class="flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                  <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-sm sm:text-base">📖</span>
+                  <div>
+                    <div class="font-semibold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900">Resep Seduh &amp; Majalah</div>
+                    <div class="text-[10px] sm:text-[11px] text-stone-500 font-normal">Kalkulator V60 &amp; Jurnal Barista</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-xs sm:text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+              </a>
+
+              <a href="info_toko.html" class="flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                  <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-sm sm:text-base">🏪</span>
+                  <div>
+                    <div class="font-semibold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900">Lokasi Toko &amp; Pick-Up</div>
+                    <div class="text-[10px] sm:text-[11px] text-stone-500 font-normal">Store Jakarta, BDG, SBY</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-xs sm:text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+              </a>
             </div>
-            
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-base">☕</span>
-                <div>
-                  <div class="font-semibold text-sm text-stone-900 group-hover:text-amber-900">Biji Kopi Specialty</div>
-                  <div class="text-[11px] text-stone-500 font-normal">Single Origin Nusantara & House Blend</div>
-                </div>
+          </div>
+
+          <!-- Desktop Smart Omni Search Bar (Hidden on Mobile) -->
+          <div class="hidden md:block relative flex-1 min-w-0">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-light-on-surface-variant text-title-md pointer-events-none" aria-hidden="true">search</span>
+            <input id="omni-search-input" type="search" placeholder="Cari biji kopi, alat seduh, mesin espresso..." aria-label="Cari biji kopi, alat seduh, mesin espresso" autocomplete="off" class="w-full pl-10 pr-20 py-2 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal placeholder:text-light-on-surface-variant font-body text-body-md focus:border-espresso-charcoal focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-caramel">
+            <div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1">
+              <button type="button" aria-label="Pencarian Visual" class="w-7 h-7 rounded inline-flex items-center justify-center text-light-on-surface-variant hover:text-espresso-charcoal">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">photo_camera</span>
+              </button>
+              <button type="button" aria-label="Pencarian Suara" class="w-7 h-7 rounded inline-flex items-center justify-center text-light-on-surface-variant hover:text-espresso-charcoal">
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">mic</span>
+              </button>
+            </div>
+
+            <!-- Focus Popover: Pencarian Populer -->
+            <div id="omni-popover" class="hidden absolute left-0 right-0 top-full mt-2 bg-light-surface-container-lowest border border-light-outline-variant rounded-md p-gutter-md z-50">
+              <span class="block font-mono text-mono-sm text-light-on-surface-variant uppercase mb-gutter-sm" data-design-text-token="mono-sm">Pencarian Populer</span>
+              <div class="flex flex-wrap gap-gutter-xs">
+                <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Electric Grinder</a>
+                <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Single Origin Gayo</a>
+                <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">V60 Dripper</a>
+                <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Cold Brew Botol</a>
               </div>
-              <span class="material-symbols-outlined text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+            </div>
+          </div>
+
+          <!-- Fulfillment Mode Selector (Desktop only) -->
+          <a href="pilih_tipe_transaksi_modal.html" class="hidden xl:flex items-center gap-gutter-sm px-gutter-md py-1.5 rounded border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal text-left shrink-0 transition-colors">
+            <span class="material-symbols-outlined text-title-lg text-light-primary shrink-0" aria-hidden="true">local_shipping</span>
+            <div class="flex flex-col">
+              <span class="font-mono text-mono-sm text-light-on-surface-variant" data-design-text-token="mono-sm">Tipe Transaksi</span>
+              <span class="font-label text-label-md text-espresso-charcoal" data-design-text-token="label-md">Pengiriman atau Belanja di Toko ⌵</span>
+            </div>
+          </a>
+
+          <!-- Right Action Icons & Auth -->
+          <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <a href="wishlist_favorit_id.html" aria-label="Wishlist" class="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal transition-colors">
+              <span class="material-symbols-outlined text-[18px] sm:text-title-md" aria-hidden="true">favorite</span>
             </a>
 
-            <a href="paket_bundling_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-base">🎁</span>
-                <div>
-                  <div class="font-semibold text-sm text-stone-900 group-hover:text-amber-900">Paket Bundling & Kafe</div>
-                  <div class="text-[11px] text-stone-500 font-normal">Home Barista Starter & Paket Usaha Kedai</div>
-                </div>
-              </div>
-              <span class="material-symbols-outlined text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+            <a href="keranjang_pengiriman_id.html" aria-label="Keranjang Belanja" class="relative inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal transition-colors">
+              <span class="material-symbols-outlined text-[18px] sm:text-title-md" aria-hidden="true">shopping_bag</span>
+              <span id="home-cart-badge" class="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-espresso-charcoal text-oat-canvas font-mono text-[10px] sm:text-mono-sm inline-flex items-center justify-center tabular-nums">0</span>
             </a>
 
-            <a href="katalog_filter_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-base">⚙️</span>
-                <div>
-                  <div class="font-semibold text-sm text-stone-900 group-hover:text-amber-900">Mesin Espresso & Grinder</div>
-                  <div class="text-[11px] text-stone-500 font-normal">Mesin Komersial, Grinder & Alat Seduh</div>
-                </div>
-              </div>
-              <span class="material-symbols-outlined text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+            <!-- Mobile Profile Link -->
+            <a href="profil_riwayat_pesanan_id.html" aria-label="Akun Saya" class="inline-flex md:hidden items-center justify-center w-8 h-8 rounded-lg border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal transition-colors">
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">person</span>
             </a>
 
-            <a href="resep_seduh_majalah_id.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-base">📖</span>
-                <div>
-                  <div class="font-semibold text-sm text-stone-900 group-hover:text-amber-900">Resep Seduh & Majalah</div>
-                  <div class="text-[11px] text-stone-500 font-normal">Kalkulator Rasio V60 & Jurnal Barista</div>
-                </div>
-              </div>
-              <span class="material-symbols-outlined text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
-            </a>
-
-            <a href="info_toko.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-amber-50/80 group transition-colors">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-base">🏪</span>
-                <div>
-                  <div class="font-semibold text-sm text-stone-900 group-hover:text-amber-900">Lokasi Toko & Pick-Up</div>
-                  <div class="text-[11px] text-stone-500 font-normal">Experience Store Jakarta, BDG, SBY</div>
-                </div>
-              </div>
-              <span class="material-symbols-outlined text-sm text-stone-400 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
-            </a>
+            <!-- Desktop Auth -->
+            <a href="masuk_akun_kroma.html" class="hidden md:inline-flex px-gutter-sm py-2 font-label text-label-md text-espresso-charcoal hover:text-light-primary transition-colors">Masuk</a>
+            <a href="daftar_akun_kroma.html" class="hidden md:inline-flex px-gutter-md py-2 rounded-full bg-warm-caramel text-espresso-charcoal hover:bg-espresso-charcoal hover:text-oat-canvas font-label text-label-md transition-colors">Daftar</a>
           </div>
         </div>
 
-        <!-- Smart Omni Search Bar -->
-        <div class="relative flex-1 min-w-0">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-light-on-surface-variant text-title-md pointer-events-none" aria-hidden="true">search</span>
-          <input id="omni-search-input" type="search" placeholder="Cari biji kopi, alat seduh, mesin espresso..." aria-label="Cari biji kopi, alat seduh, mesin espresso" autocomplete="off" class="w-full pl-10 pr-20 py-2.5 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal placeholder:text-light-on-surface-variant font-body text-body-md focus:border-espresso-charcoal focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-caramel">
-          <div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1">
-            <button type="button" aria-label="Pencarian Visual" class="w-7 h-7 rounded inline-flex items-center justify-center text-light-on-surface-variant hover:text-espresso-charcoal">
-              <span class="material-symbols-outlined text-title-md" aria-hidden="true">photo_camera</span>
-            </button>
-            <button type="button" aria-label="Pencarian Suara" class="w-7 h-7 rounded inline-flex items-center justify-center text-light-on-surface-variant hover:text-espresso-charcoal">
-              <span class="material-symbols-outlined text-title-md" aria-hidden="true">mic</span>
-            </button>
-          </div>
-
-          <!-- Focus Popover: Pencarian Populer -->
-          <div id="omni-popover" class="hidden absolute left-0 right-0 top-full mt-2 bg-light-surface-container-lowest border border-light-outline-variant rounded-md p-gutter-md z-50">
-            <span class="block font-mono text-mono-sm text-light-on-surface-variant uppercase mb-gutter-sm" data-design-text-token="mono-sm">Pencarian Populer</span>
-            <div class="flex flex-wrap gap-gutter-xs">
-              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Electric Grinder</a>
-              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Single Origin Gayo</a>
-              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">V60 Dripper</a>
-              <a href="hasil_pencarian_id.html" class="px-gutter-md py-1 rounded-full border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal font-label text-label-md text-espresso-charcoal">Cold Brew Botol</a>
+        <!-- Row 2: Mobile Search Bar & Quick Category Chips (Mobile Only) -->
+        <div class="block md:hidden">
+          <form action="hasil_pencarian_id.html" method="GET" class="relative w-full">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-base pointer-events-none" aria-hidden="true">search</span>
+            <input name="q" type="search" placeholder="Cari biji kopi, alat seduh, grinder..." aria-label="Cari biji kopi, alat seduh, grinder" class="w-full pl-9 pr-14 py-2 rounded-xl border border-stone-300 bg-white text-stone-800 placeholder:text-stone-400 text-xs focus:border-amber-800 focus:outline-none focus:ring-1 focus:ring-amber-800 shadow-sm">
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+              <a href="hasil_pencarian_id.html" class="p-1 text-stone-400 hover:text-stone-700">
+                <span class="material-symbols-outlined text-base">photo_camera</span>
+              </a>
+              <a href="hasil_pencarian_id.html" class="p-1 text-stone-400 hover:text-stone-700">
+                <span class="material-symbols-outlined text-base">mic</span>
+              </a>
             </div>
+          </form>
+
+          <!-- Mobile Quick Scroll Filter Chips -->
+          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-2 pb-0.5 text-[11px] whitespace-nowrap">
+            <a href="katalog_filter_id.html" class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-semibold border border-amber-300/60 shrink-0">⚡ Flash Sale</a>
+            <a href="katalog_filter_id.html" class="px-2.5 py-1 rounded-full bg-white text-stone-700 border border-stone-200 shrink-0">☕ Single Origin</a>
+            <a href="paket_bundling_id.html" class="px-2.5 py-1 rounded-full bg-white text-stone-700 border border-stone-200 shrink-0">🎁 Paket Kafe</a>
+            <a href="katalog_filter_id.html" class="px-2.5 py-1 rounded-full bg-white text-stone-700 border border-stone-200 shrink-0">⚙️ Grinder &amp; V60</a>
+            <a href="resep_seduh_majalah_id.html" class="px-2.5 py-1 rounded-full bg-white text-stone-700 border border-stone-200 shrink-0">📖 Resep Seduh</a>
+            <a href="info_toko.html" class="px-2.5 py-1 rounded-full bg-white text-stone-700 border border-stone-200 shrink-0">🏪 Info Toko</a>
           </div>
-        </div>
-
-        <!-- Fulfillment Mode Selector (Tipe Transaksi Widget) -->
-        <a href="pilih_tipe_transaksi_modal.html" class="hidden xl:flex items-center gap-gutter-sm px-gutter-md py-1.5 rounded border border-light-outline-variant bg-light-surface-container-low hover:border-espresso-charcoal text-left shrink-0 transition-colors">
-          <span class="material-symbols-outlined text-title-lg text-light-primary shrink-0" aria-hidden="true">local_shipping</span>
-          <div class="flex flex-col">
-            <span class="font-mono text-mono-sm text-light-on-surface-variant" data-design-text-token="mono-sm">Tipe Transaksi</span>
-            <span class="font-label text-label-md text-espresso-charcoal" data-design-text-token="label-md">Pengiriman atau Belanja di Toko ⌵</span>
-          </div>
-        </a>
-
-        <!-- Right Icons & Auth -->
-        <div class="flex items-center gap-gutter-sm shrink-0">
-          <a href="wishlist_favorit_id.html" aria-label="Wishlist" class="inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
-            <span class="material-symbols-outlined text-title-md" aria-hidden="true">favorite</span>
-          </a>
-
-          <a href="keranjang_pengiriman_id.html" aria-label="Keranjang Belanja" class="relative inline-flex items-center justify-center w-10 h-10 rounded border border-light-outline-variant bg-light-surface-container-lowest text-espresso-charcoal hover:border-espresso-charcoal">
-            <span class="material-symbols-outlined text-title-md" aria-hidden="true">shopping_bag</span>
-            <span id="home-cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm inline-flex items-center justify-center tabular-nums">0</span>
-          </a>
-
-          <a href="masuk_akun_kroma.html" class="px-gutter-sm py-2 font-label text-label-md text-espresso-charcoal hover:text-light-primary transition-colors">Masuk</a>
-          <a href="daftar_akun_kroma.html" class="px-gutter-md py-2 rounded-full bg-warm-caramel text-espresso-charcoal hover:bg-espresso-charcoal hover:text-oat-canvas font-label text-label-md transition-colors">Daftar</a>
         </div>
       </div>
     </header>
@@ -377,7 +454,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               </a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-md items-stretch">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-gutter-md items-stretch">
               <!-- Flash Item 1 -->
               <article class="bg-oat-canvas text-espresso-charcoal rounded-md overflow-hidden flex flex-col justify-between h-full">
                 <div>
@@ -385,7 +462,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     <img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80';" alt="Mandheling Arabica 200g" class="w-full h-full object-cover">
                     <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 40%</span>
                   </div>
-                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                     <h3 class="font-title text-title-md text-espresso-charcoal">Mandheling Arabica 200g</h3>
                     <div class="flex items-baseline gap-gutter-sm">
                       <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 95.000</span>
@@ -399,7 +476,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     </div>
                   </div>
                 </div>
-                <div class="p-gutter-md pt-0">
+                <div class="p-2.5 sm:p-gutter-md pt-0">
                   <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
                 </div>
               </article>
@@ -411,7 +488,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80';" alt="Timemore C3 Max" class="w-full h-full object-cover">
                     <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 25%</span>
                   </div>
-                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                     <h3 class="font-title text-title-md text-espresso-charcoal">Timemore C3 Max</h3>
                     <div class="flex items-baseline gap-gutter-sm">
                       <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 1.050.000</span>
@@ -425,7 +502,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     </div>
                   </div>
                 </div>
-                <div class="p-gutter-md pt-0">
+                <div class="p-2.5 sm:p-gutter-md pt-0">
                   <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
                 </div>
               </article>
@@ -437,7 +514,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     <img src="https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80';" alt="Fellow Stagg EKG Kettle" class="w-full h-full object-cover">
                     <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 20%</span>
                   </div>
-                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                     <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Gooseneck Kettle</h3>
                     <div class="flex items-baseline gap-gutter-sm">
                       <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 760.000</span>
@@ -451,7 +528,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     </div>
                   </div>
                 </div>
-                <div class="p-gutter-md pt-0">
+                <div class="p-2.5 sm:p-gutter-md pt-0">
                   <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
                 </div>
               </article>
@@ -463,7 +540,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80';" alt="Gayo Washed 250g" class="w-full h-full object-cover">
                     <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-light-error text-light-on-error font-mono text-mono-sm">Hemat 30%</span>
                   </div>
-                  <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                  <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                     <h3 class="font-title text-title-md text-espresso-charcoal">Gayo Washed 250g</h3>
                     <div class="flex items-baseline gap-gutter-sm">
                       <span class="font-mono text-title-md text-light-primary tabular-nums">Rp 110.000</span>
@@ -477,7 +554,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                     </div>
                   </div>
                 </div>
-                <div class="p-gutter-md pt-0">
+                <div class="p-2.5 sm:p-gutter-md pt-0">
                   <button type="button" class="home-add-btn w-full py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">+ Keranjang</button>
                 </div>
               </article>
@@ -501,9 +578,9 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </a>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-gutter-md items-stretch">
+          <div class="flex overflow-x-auto no-scrollbar snap-x gap-3 pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 md:grid md:grid-cols-3 lg:grid-cols-6 items-stretch">
             <!-- Video 1 -->
-            <a href="mandheling_arabica_pdp_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+            <a href="mandheling_arabica_pdp_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant w-36 sm:w-44 shrink-0 snap-start md:w-auto">
               <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80';" alt="Kalibrasi Espresso Rumahan" class="w-full h-full object-cover opacity-85">
               <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">1 Produk</span>
@@ -521,7 +598,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </a>
 
             <!-- Video 2 -->
-            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant w-36 sm:w-44 shrink-0 snap-start md:w-auto">
               <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80';" alt="Review Grinder Single Dose" class="w-full h-full object-cover opacity-85">
               <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">4 Produk</span>
@@ -539,7 +616,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </a>
 
             <!-- Video 3 -->
-            <a href="mandheling_arabica_pdp_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+            <a href="mandheling_arabica_pdp_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant w-36 sm:w-44 shrink-0 snap-start md:w-auto">
               <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80';" alt="Kopi Flores Washed" class="w-full h-full object-cover opacity-85">
               <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">1 Produk</span>
@@ -557,7 +634,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </a>
 
             <!-- Video 4 -->
-            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant w-36 sm:w-44 shrink-0 snap-start md:w-auto">
               <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1525648199074-bee30be20109?auto=format&fit=crop&w=600&q=80';" alt="Split Shot Espresso vs Lungo" class="w-full h-full object-cover opacity-85">
               <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">5 Produk</span>
@@ -575,7 +652,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </a>
 
             <!-- Video 5 -->
-            <a href="hasil_pencarian_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+            <a href="hasil_pencarian_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant w-36 sm:w-44 shrink-0 snap-start md:w-auto">
               <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80';" alt="Dial-In V60 Kopi Gayo" class="w-full h-full object-cover opacity-85">
               <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">2 Produk</span>
@@ -593,7 +670,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </a>
 
             <!-- Video 6 -->
-            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant">
+            <a href="katalog_filter_id.html" class="group relative rounded-lg overflow-hidden aspect-[9/16] bg-espresso-charcoal border border-light-outline-variant w-36 sm:w-44 shrink-0 snap-start md:w-auto">
               <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80';" alt="Unboxing Kettle Gooseneck" class="w-full h-full object-cover opacity-85">
               <div class="absolute inset-0 bg-gradient-to-t from-espresso-charcoal via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-espresso-charcoal text-oat-canvas font-mono text-mono-sm">1 Produk</span>
@@ -621,8 +698,8 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Klaim Kupon Spesial Member Baru</h2>
           </div>
 
-          <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
-            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-md p-gutter-lg flex items-center justify-between gap-gutter-md">
+          <div class="w-full flex overflow-x-auto no-scrollbar snap-x gap-3 pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 md:grid md:grid-cols-3 md:gap-gutter-lg">
+            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-xl p-4 flex items-center justify-between gap-3 w-72 shrink-0 snap-start md:w-auto">
               <div class="flex flex-col gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary uppercase">SINGLEORIGIN90</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Diskon Member Baru</h3>
@@ -631,7 +708,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <button type="button" onclick="this.textContent=&#39;Diklaim ✓&#39;;" class="px-gutter-md py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md shrink-0">Klaim</button>
             </div>
 
-            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-md p-gutter-lg flex items-center justify-between gap-gutter-md">
+            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-xl p-4 flex items-center justify-between gap-3 w-72 shrink-0 snap-start md:w-auto">
               <div class="flex flex-col gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary uppercase">HOMEBREWER500</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Diskon Home Brewer</h3>
@@ -640,7 +717,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <button type="button" onclick="this.textContent=&#39;Diklaim ✓&#39;;" class="px-gutter-md py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md shrink-0">Klaim</button>
             </div>
 
-            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-md p-gutter-lg flex items-center justify-between gap-gutter-md">
+            <div class="bg-light-surface-container-lowest border-2 border-dashed border-warm-caramel rounded-xl p-4 flex items-center justify-between gap-3 w-72 shrink-0 snap-start md:w-auto">
               <div class="flex flex-col gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary uppercase">HOMEBREWER50</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Diskon Belanja</h3>
@@ -755,12 +832,12 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-gutter-lg items-stretch">
             <a href="resep_seduh_majalah_id.html" class="block hover:scale-[1.02] transition-transform"><article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col h-full">
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80';" alt="Kopi Tubruk Gula Aren Specialty" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">RASIO 1:12 · 94°C</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Tubruk Gula Aren</h3>
               </div>
@@ -771,7 +848,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=600&q=80';" alt="MHW-3BOMBER Eggonaut Aeropress Recipe" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">AEROPRESS · 2:10</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">MHW-3BOMBER Eggonaut Aeropress Recipe</h3>
               </div>
@@ -782,7 +859,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=600&q=80';" alt="Iced Japanese Drip Coffee V60" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">V60 ICED · 1:15</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Iced Japanese V60</h3>
               </div>
@@ -793,7 +870,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80';" alt="Cold Brew Citrus Splash" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">COLD BREW · 14 JAM</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Cold Brew Citrus Splash</h3>
               </div>
@@ -810,19 +887,19 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Semua Lokasi Toko Kami — Penuhi kebutuhan ngopi kamu di toko kami atau pesan online lalu ambil di toko!</h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-gutter-lg items-stretch">
             <!-- Store 1 -->
             <article class="bg-light-surface-container-lowest border border-light-outline-variant rounded-md overflow-hidden flex flex-col justify-between h-full">
               <div>
                 <div class="aspect-[4/3] bg-light-surface-container-low">
                   <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?auto=format&fit=crop&w=600&q=80';" alt="Kroma Experience Store Senopati" class="w-full h-full object-cover">
                 </div>
-                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                   <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Experience Store - Senopati (Jakarta Selatan)</h3>
                   <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 09:00 - 20:00</span>
                 </div>
               </div>
-              <div class="p-gutter-md pt-0">
+              <div class="p-2.5 sm:p-gutter-md pt-0">
                 <a href="lokasi_experience_store_id.html" class="block text-center py-2 rounded bg-espresso-charcoal text-oat-canvas hover:bg-light-primary font-label text-label-md transition-colors">Info Toko &amp; Ambil di Sini</a>
               </div>
             </article>
@@ -833,12 +910,12 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <div class="aspect-[4/3] bg-light-surface-container-low">
                   <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&w=600&q=80';" alt="Kroma Roastery Hub Dago" class="w-full h-full object-cover">
                 </div>
-                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                   <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Roastery Hub - Dago (Bandung)</h3>
                   <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 08:00 - 21:00</span>
                 </div>
               </div>
-              <div class="p-gutter-md pt-0">
+              <div class="p-2.5 sm:p-gutter-md pt-0">
                 <a href="lokasi_experience_store_id.html" class="block text-center py-2 rounded border border-light-outline-variant text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Info Toko</a>
               </div>
             </article>
@@ -849,12 +926,12 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <div class="aspect-[4/3] bg-light-surface-container-low">
                   <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&w=600&q=80';" alt="Kroma Flagship Store Surabaya" class="w-full h-full object-cover">
                 </div>
-                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                   <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Flagship Store - Surabaya (Gubeng)</h3>
                   <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 09:00 - 20:00</span>
                 </div>
               </div>
-              <div class="p-gutter-md pt-0">
+              <div class="p-2.5 sm:p-gutter-md pt-0">
                 <a href="lokasi_experience_store_id.html" class="block text-center py-2 rounded border border-light-outline-variant text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Info Toko</a>
               </div>
             </article>
@@ -865,12 +942,12 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
                 <div class="aspect-[4/3] bg-light-surface-container-low">
                   <img src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80';" alt="Kroma Heritage Store Semarang" class="w-full h-full object-cover">
                 </div>
-                <div class="p-gutter-md flex flex-col gap-gutter-xs">
+                <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                   <h3 class="font-title text-title-md text-espresso-charcoal">Kroma Heritage Store - Semarang (Kota Lama)</h3>
                   <span class="font-mono text-mono-sm text-light-on-surface-variant">Jam: 09:00 - 20:00</span>
                 </div>
               </div>
-              <div class="p-gutter-md pt-0">
+              <div class="p-2.5 sm:p-gutter-md pt-0">
                 <a href="lokasi_experience_store_id.html" class="block text-center py-2 rounded border border-light-outline-variant text-espresso-charcoal hover:border-espresso-charcoal font-label text-label-md transition-colors">Info Toko</a>
               </div>
             </article>
@@ -886,7 +963,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
             <h2 class="font-headline text-headline-lg text-espresso-charcoal" data-design-text-token="headline-lg">Temukan yang Anda Inginkan</h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter-md items-stretch">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-gutter-md items-stretch">
             <a href="katalog_filter_id.html" class="bg-light-surface-container-lowest border border-light-outline-variant hover:border-espresso-charcoal rounded-md p-gutter-lg flex items-center gap-gutter-md transition-colors">
               <img src="https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&w=600&q=80';" alt="Starter Kit" class="w-20 h-20 rounded object-cover shrink-0">
               <div class="flex flex-col gap-1">
@@ -1007,7 +1084,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80';" alt="Kedai Kopi RTD" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">BISNIS KOPI</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Cara Buka Kedai Kopi RTD di Toko, dari Resep ke Chiller</h3>
               </div>
@@ -1018,7 +1095,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80';" alt="Mesin Espresso Rumahan" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">REKOMENDASI ALAT</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">5 Mesin Espresso Rumahan Terbaik untuk Kado Natal &amp; Akhir Tahun</h3>
               </div>
@@ -1029,7 +1106,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80';" alt="Membersihkan Grinder" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">PERAWATAN</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal text-balance">Cara Membersihkan Grinder Manual &amp; Elektrik agar Burr Awet</h3>
               </div>
@@ -1040,7 +1117,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
               <div class="aspect-[4/3] bg-light-surface-container-low">
                 <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80';" alt="Tren Specialty Coffee 2026" class="w-full h-full object-cover">
               </div>
-              <div class="p-gutter-md flex flex-col gap-gutter-xs">
+              <div class="p-2.5 sm:p-gutter-md flex flex-col gap-1 sm:gap-gutter-xs">
                 <span class="font-mono text-mono-sm text-light-primary">TREN INDUSTRI</span>
                 <h3 class="font-title text-title-md text-espresso-charcoal">Tren Industri Specialty Coffee 2026: Slow Bar &amp; Fermentasi</h3>
               </div>
@@ -1164,5 +1241,43 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
         });
       });
     })();
+  </script>
+
+  <!-- MOBILE STICKY BOTTOM NAVIGATION BAR -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-stone-200 z-50 px-2 py-1 flex items-center justify-around shadow-lg safe-bottom">
+    <a href="kroma_homepage_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-[#C67C4E]">
+      <span class="material-symbols-outlined text-[22px]">home</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Beranda</span>
+    </a>
+    <a href="katalog_filter_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">storefront</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Katalog</span>
+    </a>
+    <a href="paket_bundling_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">inventory_2</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Bundling</span>
+    </a>
+    <a href="resep_seduh_majalah_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">menu_book</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Resep</span>
+    </a>
+    <a href="keranjang_pengiriman_id.html" class="relative flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Keranjang</span>
+      <span id="mobile-cart-badge" class="absolute top-0 right-2 w-4 h-4 rounded-full bg-[#C67C4E] text-white text-[9px] font-bold inline-flex items-center justify-center">0</span>
+    </a>
+  </nav>
+
+  <script>
+    // Sync cart badges
+    const origBadgeScript = document.querySelectorAll('.home-add-btn');
+    origBadgeScript.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var mobileBadge = document.getElementById('mobile-cart-badge');
+        var badge = document.getElementById('home-cart-badge');
+        var cur = parseInt((badge && badge.textContent) || '0', 10);
+        if (mobileBadge) mobileBadge.textContent = String(cur);
+      });
+    });
   </script>
 </body></html>

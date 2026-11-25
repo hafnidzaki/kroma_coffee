@@ -155,7 +155,7 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
   <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
 </head>
-<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased">
+<body class="bg-oat-canvas text-espresso-charcoal font-body antialiased pb-16 md:pb-0 overflow-x-hidden">
   <div class="min-h-[1024px] flex flex-col" data-stitch-vh="min-h-[1024px]===min-h-screen">
 
     <!-- Top Utility Trust Bar (Verbatim Shell Parity) -->
@@ -725,5 +725,31 @@ if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
   </script>
 
 
+
+
+  <!-- MOBILE STICKY BOTTOM NAVIGATION BAR -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-stone-200 z-50 px-2 py-1 flex items-center justify-around shadow-lg safe-bottom">
+    <a href="kroma_homepage_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">home</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Beranda</span>
+    </a>
+    <a href="katalog_filter_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-[#C67C4E]">
+      <span class="material-symbols-outlined text-[22px]">storefront</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Katalog</span>
+    </a>
+    <a href="paket_bundling_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">inventory_2</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Bundling</span>
+    </a>
+    <a href="resep_seduh_majalah_id.html" class="flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">menu_book</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Resep</span>
+    </a>
+    <a href="keranjang_pengiriman_id.html" class="relative flex flex-col items-center justify-center py-1 px-2 text-stone-500 hover:text-stone-900">
+      <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+      <span class="text-[10px] font-medium tracking-tight mt-0.5">Keranjang</span>
+      <span class="absolute top-0 right-2 w-4 h-4 rounded-full bg-[#C67C4E] text-white text-[9px] font-bold inline-flex items-center justify-center">2</span>
+    </a>
+  </nav>
 
 </body></html>
